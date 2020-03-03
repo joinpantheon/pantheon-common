@@ -1,0 +1,12 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "echo \"3/1/2020 : you are an incredible person. happy dev-ing, Ali 🏆 🤓 💯\""
+  },
+  "main": "./build",
+  "dependencies": {
+    "@google-cloud/firestore": "^3.5.1"
+  }
+}

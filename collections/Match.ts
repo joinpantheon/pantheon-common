@@ -2,7 +2,7 @@ import Subject from "../enums/Subject";
 
 export default interface Match {
   id: string;
-  createdAt?: string;
+  creationDatetime?: number;
   gameId?: string;
   matchFound?: boolean;
   ranked?: boolean;
