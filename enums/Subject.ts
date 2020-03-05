@@ -6,7 +6,7 @@ enum Subject {
   General = 'GENERAL',
   Math = 'MATH',
   Physics = 'PHYSICS',
-  Space = 'SPACE'
+  Space = 'SPACE',
 }
 
 export default Subject;
