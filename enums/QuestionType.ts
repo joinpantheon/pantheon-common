@@ -1,6 +1,6 @@
 enum QuestionType {
-  MultipleChoice = "MULTIPLE_CHOICE",
-  ShortAnswer = "SHORT_ANSWER"
+  MultipleChoice = "MULTIPLE CHOICE",
+  ShortAnswer = "SHORT ANSWER"
 }
 
 export default QuestionType;
