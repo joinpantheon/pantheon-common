@@ -6,6 +6,7 @@ export default interface QuestionResponse {
   gameId?: string;
   gameQuestionId?: string;
   questionId?: string;
+  questionNumber?: number;
   questionResponderUserId?: string;
   questionResponderUserName?: string;
   questionResponseText?: string;
