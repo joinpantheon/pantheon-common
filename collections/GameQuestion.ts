@@ -10,7 +10,7 @@ export default interface GameQuestion {
   answerId?: string;
   correctResponseInfo?: QuestionResponseInfo;
   gameId?: string;
-  incorrectResponseInfo?: QuestionResponseInfo;
+  incorrectResponseInfo?: QuestionResponseInfo[];
   questionDisplayTimeStart?: number;
   questionDisplayTimeEnd?: number;
   questionId?: string;
