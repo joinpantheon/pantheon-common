@@ -1,4 +1,5 @@
 import Subject from "../enums/Subject";
+import { Rank } from "./User";
 
 export interface GameUser {
   city?: string;
@@ -7,6 +8,7 @@ export interface GameUser {
   state?: string;
   userId?: string;
   username?: string;
+  rank?: Rank;
 }
 
 export default interface Game {

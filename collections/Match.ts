@@ -1,5 +1,11 @@
 import Subject from "../enums/Subject";
 
+interface MatchUser {
+  id: string;
+  username: string;
+  accepted: boolean;
+}
+
 export default interface Match {
   id: string;
   creationDatetime?: number;
@@ -7,6 +13,6 @@ export default interface Match {
   matchFound?: boolean;
   ranked?: boolean;
   subjects?: Subject[];
-  user1Id?: string;
-  user2Id?: string;
+  user1?: MatchUser;
+  user2?: MatchUser;
 }
