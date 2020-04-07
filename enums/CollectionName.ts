@@ -10,7 +10,9 @@ enum CollectionName {
   QuestionResponses = "questionResponses",
   Users = "users",
   UsersPrivate = "usersPrivate",
-  UserReports = "userReports"
+  UserReports = "userReports",
+  Notifications = "notifications",
+  Status = "status"
 }
 
 export default CollectionName;
