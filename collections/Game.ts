@@ -18,6 +18,7 @@ export default interface Game {
   gameEndDatetime?: number;
   gameStartDatetime?: number;
   isCompleted?: boolean;
+  leaverId?: string;
   questionNumber?: number;
   ranked?: boolean;
   subjects?: Subject[];
