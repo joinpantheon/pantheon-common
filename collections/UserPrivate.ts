@@ -19,6 +19,7 @@ export default interface UserPrivate {
   rating?: number; // Internal elo rating (ex. 1200)
   school?: string;
   state?: string;
+  referrer?: string;
   totalTime?: number; // Total time spent playing
   allSubjects?: SubjectStats;
   biology?: SubjectStats;
