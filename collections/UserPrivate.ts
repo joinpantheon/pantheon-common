@@ -15,7 +15,9 @@ export default interface UserPrivate {
   id: string;
   city?: string;
   email?: string;
-  name?: string;
+  firstName?: string;
+  lastName?: string;
+  name?: string; // deprecated, need to change users in actual firebase db
   rating?: number; // Internal elo rating (ex. 1200)
   school?: string;
   state?: string;
