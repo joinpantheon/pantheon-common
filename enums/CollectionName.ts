@@ -3,7 +3,7 @@ enum CollectionName {
   Chats = "chats",
   Friendships = "friendships",
   Games = "games",
-  GameQuestions = "gameQuestions",
+  GameQuestionAnswers = "gameQuestionAnswers",
   Matches = "matches",
   Questions = "questions",
   QuestionReports = "questionReports",

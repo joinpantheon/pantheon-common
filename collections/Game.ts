@@ -11,6 +11,13 @@ export interface GameUser {
   rank?: Rank;
 }
 
+export interface QuestionResponseInfo {
+  userId?: string;
+  username?: string;
+  questionResponseId?: string;
+  questionResponseText?: string;
+}
+
 export default interface Game {
   id: string;
   chatId: string;
@@ -21,6 +28,12 @@ export default interface Game {
   leaverId?: string;
   playerLeft?: boolean;
   questionNumber?: number;
+  responseInfo?: { [questionNumberX: string]: 
+    { 
+      incorrectResponseInfo: QuestionResponseInfo[], 
+      correctResponseInfo: QuestionResponseInfo | null
+    }
+  };
   ranked?: boolean;
   subjects?: Subject[];
   user1?: GameUser; // User id, user name, score

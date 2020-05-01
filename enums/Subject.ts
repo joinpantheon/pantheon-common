@@ -1,4 +1,5 @@
 enum Subject {
+  All = 'ALL',
   Biology = 'BIOLOGY',
   Chemistry = 'CHEMISTRY',
   Earth = 'EARTH',

@@ -23,6 +23,7 @@ export default interface UserPrivate {
   state?: string;
   referrer?: string;
   totalTime?: number; // Total time spent playing
+  creationDatetime?: number;
   allSubjects?: SubjectStats;
   biology?: SubjectStats;
   chemistry?: SubjectStats;

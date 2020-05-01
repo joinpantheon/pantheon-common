@@ -5,7 +5,7 @@ export default interface QuestionReport {
   answerId?: string;
   answerText?: string;
   gameId?: string;
-  gameQuestionId?: string;
+  gameQuestionAnswerId?: string;
   questionId?: string;
   questionReportReasons?: QuestionReportReason[];
   questionReportText?: string;
