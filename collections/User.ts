@@ -7,6 +7,18 @@ export interface Rank {
   points?: number; // Within tier and division [0-100]
 }
 
+export interface SubjectStats {
+  numQuestionsSeen?: number;
+  numQuestionsCorrect?: number;
+  numQuestionsIncorrect?: number;
+  numQuestionsTimeout?: number;
+  numGames?: number;
+  numGamesWon?: number;
+  numGamesLost?: number;
+  numGamesLeft?: number;
+  numGamesWonByDefault?: number;
+}
+
 export default interface User {
   id: string;
   creationDatetime?: number;
@@ -17,7 +29,17 @@ export default interface User {
   school?: string;
   state?: string;
   username?: string;
+  totalTime?: number; // Total time spent playing
+  allSubjects?: SubjectStats;
+  biology?: SubjectStats;
+  chemistry?: SubjectStats;
+  computer?: SubjectStats;
+  earth?: SubjectStats;
+  energy?: SubjectStats;
+  math?: SubjectStats;
+  physics?: SubjectStats;
+  space?: SubjectStats;
+  generalKnowledge?: SubjectStats;
 }
 
-// TODO?: do we need an isOnline field?
 // TODO?: should honor be private?
