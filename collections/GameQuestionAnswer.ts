@@ -2,10 +2,9 @@ import Subject from "../enums/Subject";
 
 export default interface GameQuestionAnswer {
   id: string;
-  answerId?: string;
   gameId?: string;
   answerText?: string;
-  questionId?: string;
+  questionAnswerId?: string;
   questionNumber?: number;
   questionResponseType?: string; // Multiple choice or short answer
   questionSubject?: Subject;

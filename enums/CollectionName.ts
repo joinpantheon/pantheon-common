@@ -4,6 +4,7 @@ enum CollectionName {
   Friendships = "friendships",
   Games = "games",
   GameQuestionAnswers = "gameQuestionAnswers",
+  QuestionAnswers = "questionAnswers",
   Matches = "matches",
   Questions = "questions",
   QuestionReports = "questionReports",

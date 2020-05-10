@@ -2,12 +2,11 @@ import Subject from '../enums/Subject';
 
 export default interface QuestionResponse {
   id: string;
-  answerId?: string;
   answerText?: string;
   isCorrect?: boolean;
   gameId?: string;
   gameQuestionAnswerId?: string;
-  questionId?: string;
+  questionAnswerId?: string;
   questionNumber?: number;
   questionResponderUserId?: string;
   questionResponderUserName?: string;
