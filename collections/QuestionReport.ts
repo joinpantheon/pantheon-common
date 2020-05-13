@@ -1,4 +1,3 @@
-import QuestionReportReason from "../enums/QuestionReportReason";
 
 export default interface QuestionReport {
   id: string;
@@ -6,11 +5,11 @@ export default interface QuestionReport {
   gameId?: string;
   gameQuestionAnswerId?: string;
   questionAnswerId?: string;
-  questionReportReasons?: QuestionReportReason[];
   questionReportText?: string;
   questionResponseId?: string;
   questionResponseText?: string;
   questionSubject?: string;
   questionText?: string;
   reporterUserId?: string;
+  creationDatetime?: number;
 }
