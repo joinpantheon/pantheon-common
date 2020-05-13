@@ -7,6 +7,7 @@
   },
   "main": "./build",
   "dependencies": {
-    "@google-cloud/firestore": "^3.5.1"
+    "@google-cloud/firestore": "^3.5.1",
+    "firebase": "^7.14.3"
   }
 }
