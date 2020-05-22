@@ -1,13 +1,22 @@
 {
-  "name": "common",
-  "version": "1.0.0",
+  "name": "@pantheon/common",
+  "version": "0.0.1",
+  "description": "Data schema and common utils for Pantheon",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "echo \"3/1/2020 : you are an incredible person. happy dev-ing, Ali 🏆 🤓 💯\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "./build",
-  "dependencies": {
-    "@google-cloud/firestore": "^3.5.1",
-    "firebase": "^7.14.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinpantheon/pantheon-common.git"
+  },
+  "author": "Pantheon",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/joinpantheon/pantheon-common/issues"
+  },
+  "homepage": "https://github.com/joinpantheon/pantheon-common#readme",
+  "devDependencies": {
+    "typescript": "^3.9.3"
   }
 }

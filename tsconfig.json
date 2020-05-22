@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
-    "noImplicitReturns": true,
-    "outDir": "build",
-    "sourceMap": true,
-    "target": "es2017"
+    "declaration": true,
+    "outDir": "lib",
+    "strict": true
   },
   "include": [
-    ".",
-    "./**/*.ts"
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
