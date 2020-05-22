@@ -2,17 +2,18 @@ export interface SubjectStat {
   numQuestionsSeen?: number;
   numQuestionsCorrect?: number;
   numQuestionsIncorrect?: number;
-  numQuestionsTimeout?: number;
+  numQuestionsUnanswered?: number; // changed from timeout
   questionCorrectPercentage?: number;
 
   numGames?: number;
   numGamesWon?: number;
   numGamesLost?: number;
+  numGamesDrawn?: number; // added
   numGamesLeft?: number;
   numGamesWonByDefault?: number;
 }
 
-export default interface Statistic {
+export default interface Stats {
   userId: string;
   username: string;
   totalTime?: number;
