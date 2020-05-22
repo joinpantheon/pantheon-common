@@ -31,3 +31,5 @@ yarn-error.log*
 .vscode
 .firebase
 .firebaserc
+*.js
+**/*.js

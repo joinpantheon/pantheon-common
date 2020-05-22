@@ -7,8 +7,8 @@ import QuestionResponse from "../collections/QuestionResponse";
 import User from "../collections/User";
 import UserPrivate from "../collections/UserPrivate";
 import UserReport from "../collections/UserReport";
-import Answer from "../deprecared/Answer";
-import Question from "../deprecared/Question";
+import Answer from "../deprecated/Answer";
+import Question from "../deprecated/Question";
 
 type Document = Answer | Chat | Friendship | Game | GameQuestionAnswer | Question |
   QuestionReport | QuestionResponse | User | UserPrivate | UserReport;
