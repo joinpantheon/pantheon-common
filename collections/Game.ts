@@ -14,7 +14,6 @@ export interface GameUser {
 export interface QuestionResponseInfo {
   userId?: string;
   username?: string;
-  questionResponseId?: string;
   questionResponseText?: string;
 }
 
