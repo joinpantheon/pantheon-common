@@ -33,3 +33,4 @@ yarn-error.log*
 .firebaserc
 *.js
 **/*.js
+lib/
