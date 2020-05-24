@@ -1,3 +1,5 @@
+import ResponseType from "../enums/ResponseType";
+import Subject from "../enums/Subject";
 
 export default interface QuestionReport {
   id: string;
@@ -8,7 +10,8 @@ export default interface QuestionReport {
   questionReportText?: string;
   questionResponseId?: string;
   questionResponseText?: string;
-  questionSubject?: string;
+  questionResponseType?: ResponseType;
+  questionSubject?: Subject;
   questionText?: string;
   reporterUserId?: string;
   creationDatetime?: number;

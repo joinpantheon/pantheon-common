@@ -2,13 +2,13 @@ export interface SubjectStat {
   numQuestionsSeen?: number;
   numQuestionsCorrect?: number;
   numQuestionsIncorrect?: number;
-  numQuestionsUnanswered?: number; // changed from timeout
+  numQuestionsUnanswered?: number;
   questionCorrectPercentage?: number;
 
   numGames?: number;
   numGamesWon?: number;
   numGamesLost?: number;
-  numGamesDrawn?: number; // added
+  numGamesDrawn?: number;
   numGamesLeft?: number;
   numGamesWonByDefault?: number;
 }

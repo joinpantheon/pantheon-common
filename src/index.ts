@@ -18,6 +18,7 @@ export { default as Question } from './deprecated/Question';
 export { default as QuestionResponse } from './deprecated/QuestionResponse';
 export { default as CollectionName } from './enums/CollectionName';
 export { default as Division } from './enums/Division';
+export { default as NotificationType } from './enums/NotificationType';
 export { default as QuestionReportReason } from './enums/QuestionReportReason';
 export { default as QuestionType } from './enums/QuestionType';
 export { default as ResponseType } from './enums/ResponseType';
@@ -28,3 +29,4 @@ export { default as Tier } from './enums/Tier';
 export { default as UserReportReason } from './enums/UserReportReason';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
+
