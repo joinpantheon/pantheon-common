@@ -12,7 +12,8 @@ enum Subject {
   // Multi-subjects
   BiologyChemistry = 'Biochemistry',
   ChemistryPhysics = 'Physical science',
-  EarthSpace = 'Earth and space'
+  EarthSpace = 'Earth and space',
+  All = 'All' // deprecated, for backwards compatibility
 }
 
 export default Subject;
