@@ -1,6 +1,6 @@
 import Subject from "../enums/Subject";
 
-interface MatchUser {
+export interface MatchUser {
   id: string;
   username: string;
   accepted: boolean;

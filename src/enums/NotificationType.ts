@@ -1,5 +1,5 @@
 enum NotificationType {
-  GameRequest = 'Game Request',
+  GameRequest = 'Game Request'
 }
 
 export default NotificationType;
