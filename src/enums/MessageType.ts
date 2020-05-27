@@ -1,9 +1,10 @@
 enum MessageType {
-  // Chat = "CHAT",
-  // WrongAnswer = "WRONG_ANSWER",
-  // RightAnswer = "RIGHT_ANSWER",
-  // Notification = "NOTIFICATION",
-  // QuestionReport = "QUESTION_REPORT",
+  // deprecated, but need definition for ts
+  Chat_DEPR = "CHAT",
+  WrongAnswer_DEPR = "WRONG_ANSWER",
+  RightAnswer_DEPR = "RIGHT_ANSWER",
+  Notification_DEPR = "NOTIFICATION",
+  QuestionReport_DEPR = "QUESTION_REPORT",
   
   Chat = "Chat",
   IncorrectAnswer = "Incorrect Answer",
