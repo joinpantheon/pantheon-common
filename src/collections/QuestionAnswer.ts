@@ -4,7 +4,8 @@ import Subject from "../enums/Subject";
 
 export default interface QuestionAnswer {
   id: string;
-  answerText: string;
+  answerText?: string;
+  details?: string; // Any extra information from source that might be useful
   index?: number; // Used to randomly pick questions
   previousIds?: string[]; // List of previous ids, in case we update id
   questionText?: string;
@@ -12,4 +13,6 @@ export default interface QuestionAnswer {
   responseType?: ResponseType; // Multiple choice or short answer
   source?: string; // Where the question came from
   subject?: Subject;
+  uploader?: string; // Who uploaded the question/aggregator name
+  url?: string; // Source url
 }
