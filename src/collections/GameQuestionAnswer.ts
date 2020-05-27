@@ -1,3 +1,4 @@
+import ResponseType from "../enums/ResponseType";
 import Subject from "../enums/Subject";
 
 export default interface GameQuestionAnswer {
@@ -6,7 +7,7 @@ export default interface GameQuestionAnswer {
   answerText?: string;
   questionAnswerId?: string;
   questionNumber?: number;
-  questionResponseType?: string; // Multiple choice or short answer
+  questionResponseType?: ResponseType;
   questionSubject?: Subject;
   questionText?: string;
 }

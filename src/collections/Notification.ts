@@ -1,6 +1,9 @@
+import NotificationType from "../enums/NotificationType";
+import Subject from "../enums/Subject";
+
 interface GameMatchMessage {
   matchId: string;
-  subject?: string; // Subject enum
+  subject?: Subject;
   requestAccepted?: boolean;
 }
 
@@ -10,6 +13,6 @@ export default interface Notification {
   senderUserId?: string;
   senderUsername?: string;
   receiverUserId?: string;
-  type?: string; // NotificationType Enum
+  type?: NotificationType;
   data?: GameMatchMessage;
 }
