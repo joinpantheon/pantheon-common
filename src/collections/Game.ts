@@ -9,6 +9,7 @@ export interface GameUser {
   userId?: string;
   username?: string;
   rank?: Rank;
+  pointsChange?: number
 }
 
 export interface QuestionResponseInfo {
