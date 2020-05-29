@@ -33,7 +33,3 @@ yarn-error.log*
 .firebaserc
 *.js
 **/*.js
-
-# custom
-dist
-/dist
