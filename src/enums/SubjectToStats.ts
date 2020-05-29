@@ -1,4 +1,4 @@
-enum SubjectStats {
+enum SubjectToStats {
   Biology = 'biology',
   Chemistry = 'chemistry',
   Computer = 'computer',
@@ -11,4 +11,4 @@ enum SubjectStats {
   AllSubjects = 'allSubjects'
 }
 
-export default SubjectStats;
+export default SubjectToStats;

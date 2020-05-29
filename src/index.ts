@@ -26,7 +26,7 @@ export { default as QuestionType } from './enums/QuestionType';
 export { default as ResponseType } from './enums/ResponseType';
 export { default as State } from './enums/State';
 export { default as Subject } from './enums/Subject';
-export { default as SubjectStats } from './enums/SubjectStats';
+export { default as SubjectToStats } from './enums/SubjectToStats';
 export { default as Tier } from './enums/Tier';
 export { default as UserReportReason } from './enums/UserReportReason';
 export { default as Document } from './types/Document';
