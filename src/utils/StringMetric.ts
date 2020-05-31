@@ -69,7 +69,7 @@ export default class StringMetric {
    */
   private editCost(a: string, b: string, opts: MetricOptions): number {
     if (a.length > 1 || b.length > 1) return this.levenshtein(a, b);
-    if (opts.caseSensitive) {
+    if (!opts.caseSensitive) {
       a = a.toLowerCase();
       b = b.toLowerCase();
     }
