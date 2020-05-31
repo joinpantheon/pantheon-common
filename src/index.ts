@@ -31,4 +31,4 @@ export { default as Tier } from './enums/Tier';
 export { default as UserReportReason } from './enums/UserReportReason';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
-
+export { default as StringMetric } from './utils/StringMetric';
