@@ -27,3 +27,7 @@ yarn-error.log*
 .vscode
 .firebase
 .firebaserc
+
+# custom
+dist
+/dist
