@@ -1,7 +1,9 @@
 export default class StringMetric {
   charCoordMap: CharCoordMap;
+  options?: MetricOptions;
 
-  constructor() {
+  constructor(options?: MetricOptions) {
+    this.options = options;
     this.charCoordMap = new CharCoordMap();
   }
 
@@ -13,23 +15,32 @@ export default class StringMetric {
    * @param a 
    * @param b 
    */
-  public levenstein(a: string, b: string, customCost: boolean=false, 
-      substr: boolean=false, damerau: boolean=true): number {
+  public levenshtein(a: string, b: string, options?: MetricOptions): 
+      number {
     if (a.length === 0) return b.length; 
     if (b.length === 0) return a.length; 
     if (a.length > b.length) [a, b] = [b, a];
 
+    // Set options
+    const defaultOptions: MetricOptions = {
+      caseSensitive: false,
+      customCost: false,
+      searchSubstr: false
+    };
+    const opts: MetricOptions = 
+      Object.assign({}, defaultOptions, this.options, options);
+
     // Increment along top and left edges of matrix
     const memo: number[][] = [];
     for (let i = 0; i <= a.length; i++) memo[i] = [i];
-    for (let j = 0; j <= b.length; j++) memo[0][j] = (substr ? 0 : j);
+    for (let j = 0; j <= b.length; j++) memo[0][j] = (opts.searchSubstr ? 0 : j);
 
     // Fill in the rest of the matrix
     let cost: number;
     for (let i = 1; i <= a.length; i++){
       for (let j = 1; j <= b.length; j++){
         // Calculate edit cost and determine cheapest edit action
-        cost = customCost ? this.editCost(a.charAt(i-1), b.charAt(j-1)) : 1; 
+        cost = this.editCost(a.charAt(i-1), b.charAt(j-1), opts); 
         memo[i][j] = Math.min(
           memo[i][j-1] + 1,      // Insertion
           memo[i-1][j] + 1,      // Deletion
@@ -37,15 +48,14 @@ export default class StringMetric {
         );
 
         // Transposition
-        if (!damerau) continue;
-        cost = customCost ? 0.4 : 1;
+        cost = opts.customCost ? 0.4 : 1;
         if (i > 1 && j > 1 && a[i-1] === b[j-2] && a[i-2] === b[i-1]) {
           memo[i][j] = Math.min(memo[i][j], memo[i-2][j-2] + cost);
         }
       }
     }
 
-    return substr 
+    return opts.searchSubstr 
       ? Math.min(...memo[a.length].slice(a.length)) 
       : memo[a.length][b.length];
   }
@@ -57,13 +67,16 @@ export default class StringMetric {
    * @param a Single char to compare
    * @param b Single char to compare
    */
-  private editCost(a: string, b: string): number {
-    if (a.length > 1 || b.length > 1) return this.levenstein(a, b);
-    a = a.toLowerCase();
-    b = b.toLowerCase();
+  private editCost(a: string, b: string, opts: MetricOptions): number {
+    if (a.length > 1 || b.length > 1) return this.levenshtein(a, b);
+    if (opts.caseSensitive) {
+      a = a.toLowerCase();
+      b = b.toLowerCase();
+    }
 
     // Same character => no cost
     if (a === b) return 0;
+    if (!opts.customCost) return 1;
 
     // If characters are numbers, it is a more serious mistake than letters
     if (/\d/.test(a) && /\d/.test(b)) return 1.25;
@@ -80,6 +93,15 @@ export default class StringMetric {
     else if (dy === 0)    return 0.5;  // Horizontally adjacent
     else                  return 0.75; // Vertically or diagonally adjacent
   }
+}
+
+/**
+ * Options for our Levenshtein algorithm.
+ */
+interface MetricOptions {
+  caseSensitive?: boolean;
+  customCost?: boolean;
+  searchSubstr?: boolean;
 }
 
 /**
