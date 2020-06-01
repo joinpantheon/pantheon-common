@@ -1,10 +1,17 @@
 export default class StringMetric {
   charCoordMap: CharCoordMap;
+  defaultOptions: MetricOptions;
   options?: MetricOptions;
 
   constructor(options?: MetricOptions) {
     this.options = options;
     this.charCoordMap = new CharCoordMap();
+    this.defaultOptions = {
+      caseSensitive: false,
+      customCost: false,
+      searchSubstr: false,
+      searchSubstrInAOnly: false
+    };
   }
 
   /**
@@ -19,16 +26,14 @@ export default class StringMetric {
       number {
     if (a.length === 0) return b.length; 
     if (b.length === 0) return a.length; 
-    if (a.length > b.length) [a, b] = [b, a];
 
     // Set options
-    const defaultOptions: MetricOptions = {
-      caseSensitive: false,
-      customCost: false,
-      searchSubstr: false
-    };
     const opts: MetricOptions = 
-      Object.assign({}, defaultOptions, this.options, options);
+      Object.assign({}, this.defaultOptions, this.options, options);
+    
+    if (!opts.searchSubstr && opts.searchSubstrInAOnly && a.length > b.length)
+      opts.searchSubstr = true;
+    if (opts.searchSubstr && a.length > b.length) [a, b] = [b, a];
 
     // Increment along top and left edges of matrix
     const memo: number[][] = [];
@@ -102,6 +107,7 @@ interface MetricOptions {
   caseSensitive?: boolean;
   customCost?: boolean;
   searchSubstr?: boolean;
+  searchSubstrInAOnly?: boolean;
 }
 
 /**
