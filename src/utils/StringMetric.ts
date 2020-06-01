@@ -19,8 +19,10 @@ export default class StringMetric {
    * is used to find min edit distance between two given strings. Tweaked to 
    * also find edit distance between shorter input and substring of longer 
    * input of same length (https://stackoverflow.com/a/37804497/5171218).
-   * @param a 
-   * @param b 
+   * @param a First string to compare
+   * @param b Second string to compare
+   * @param options Optional flags: `caseSensitive`, `customCost`, 
+   * `searchSubstr`, `searchSubstrInAOnly`
    */
   public levenshtein(a: string, b: string, options?: MetricOptions): 
       number {
