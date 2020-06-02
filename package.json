@@ -1,6 +1,6 @@
 {
   "name": "@joinpantheon/common",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "Data schema and common utils for Pantheon",
   "main": "dist/index.js",
   "scripts": {
