@@ -83,6 +83,8 @@ export default class StringMetric {
 
     // Same character => no cost
     if (a === b) return 0;
+
+    // If we don't want custom cost, different letters => full cost
     if (!opts.customCost) return 1;
 
     // If characters are numbers, it is a more serious mistake than letters
