@@ -1,11 +1,12 @@
 {
   "name": "@joinpantheon/common",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "Data schema and common utils for Pantheon",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "tsc && np"
   },
   "repository": {
     "type": "git",
