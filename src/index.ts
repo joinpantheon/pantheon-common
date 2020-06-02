@@ -7,7 +7,7 @@ export { default as Message } from './collections/Message';
 export { default as Notification } from './collections/Notification';
 export { default as QuestionAnswer } from './collections/QuestionAnswer';
 export { default as QuestionReport } from './collections/QuestionReport';
-export { default as Stats, SubjectStat } from './collections/Stats';
+export { default as Stats, SubjectStats as SubjectStats } from './collections/Stats';
 export { default as Status } from './collections/Status';
 export { default as User, Rank } from './collections/User';
 export { default as UserPrivate } from './collections/UserPrivate';

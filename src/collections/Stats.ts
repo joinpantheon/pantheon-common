@@ -1,30 +1,30 @@
-export interface SubjectStat {
-  numQuestionsSeen?: number;
-  numQuestionsCorrect?: number;
-  numQuestionsIncorrect?: number;
-  numQuestionsUnanswered?: number;
-  questionCorrectPercentage?: number;
-
+export interface SubjectStats {
   numGames?: number;
   numGamesWon?: number;
   numGamesLost?: number;
   numGamesDrawn?: number;
   numGamesLeft?: number;
   numGamesWonByDefault?: number;
+  numQuestionsSeen?: number;
+  numQuestionsCorrect?: number;
+  numQuestionsIncorrect?: number;
+  numQuestionsUnanswered?: number;
+  questionCorrectPercentage?: number;
 }
 
 export default interface Stats {
+  id: string;
   userId: string;
   username: string;
   totalTime?: number;
-  allSubjects?: SubjectStat;
-  biology?: SubjectStat;
-  chemistry?: SubjectStat;
-  computer?: SubjectStat;
-  earth?: SubjectStat;
-  energy?: SubjectStat;
-  math?: SubjectStat;
-  physics?: SubjectStat;
-  space?: SubjectStat;
-  generalKnowledge?: SubjectStat;
+  allSubjects?: SubjectStats;
+  biology?: SubjectStats;
+  chemistry?: SubjectStats;
+  computer?: SubjectStats;
+  earth?: SubjectStats;
+  energy?: SubjectStats;
+  math?: SubjectStats;
+  physics?: SubjectStats;
+  space?: SubjectStats;
+  generalKnowledge?: SubjectStats;
 }
