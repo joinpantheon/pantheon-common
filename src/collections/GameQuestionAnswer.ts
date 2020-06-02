@@ -10,6 +10,7 @@ export default interface GameQuestionAnswer {
   questionResponseType?: ResponseType;
   questionSubject?: Subject;
   questionText?: string;
+  questionSource?: string;
 }
 
 // TODO?: might want to add questionResponseText here
