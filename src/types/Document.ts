@@ -8,13 +8,12 @@ import Notification from "../collections/Notification";
 import QuestionAnswer from "../collections/QuestionAnswer";
 import QuestionReport from "../collections/QuestionReport";
 import Stats from "../collections/Stats";
-import Status from "../collections/Status";
 import User from "../collections/User";
 import UserPrivate from "../collections/UserPrivate";
 import UserReport from "../collections/UserReport";
 
 type Document = Chat | Friendship | Game | GameQuestionAnswer | Match | 
-  Message | Notification | QuestionAnswer | Stats | Status | QuestionReport | 
-  User | UserPrivate | UserReport;
+  Message | Notification | QuestionAnswer | Stats | QuestionReport | User | 
+  UserPrivate | UserReport;
 
 export default Document;
