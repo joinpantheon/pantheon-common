@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && tsc",
-    "prepublish": "npm run build && npm version patch"
+    "prepublish": "npm run build && npm version patch",
+    "postpublish": "git push origin master"
   },
   "repository": {
     "type": "git",
