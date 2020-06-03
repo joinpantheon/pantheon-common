@@ -1,12 +1,12 @@
 {
   "name": "@joinpantheon/common",
-  "version": "0.0.33",
+  "version": "0.0.51",
   "description": "Data schema and common utils for Pantheon",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "publish": "tsc && np patch --no-release-draft"
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build && npm version patch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "jest": "^26.0.1",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.3"
   },
