@@ -20,6 +20,7 @@ export { default as CollectionName } from './enums/CollectionName';
 export { default as Division } from './enums/Division';
 export { default as MessageType } from './enums/MessageType';
 export { default as NotificationType } from './enums/NotificationType';
+export { default as QuestionError } from './enums/QuestionError';
 export { default as QuestionReportReason } from './enums/QuestionReportReason';
 export { default as QuestionType } from './enums/QuestionType';
 export { default as ResponseType } from './enums/ResponseType';
@@ -31,4 +32,3 @@ export { default as Database } from './types/Database';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { default as StringMetric } from './utils/StringMetric';
-
