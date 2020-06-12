@@ -1,6 +1,6 @@
 export { default as Chat } from './collections/Chat';
 export { default as Friendship } from './collections/Friendship';
-export { default as Game, GameUser, QuestionResponseInfo } from './collections/Game';
+export { default as Game, GameUser, QuestionBuzzerInfo, QuestionResponseInfo } from './collections/Game';
 export { default as GameQuestionAnswer } from './collections/GameQuestionAnswer';
 export { default as Match, MatchUser } from './collections/Match';
 export { default as Message } from './collections/Message';
@@ -32,3 +32,4 @@ export { default as Database } from './types/Database';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { default as StringMetric } from './utils/StringMetric';
+
