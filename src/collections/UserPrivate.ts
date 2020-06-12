@@ -5,7 +5,7 @@ export default interface UserPrivate {
   userId: string;
   referrer?: string;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.Timestamp
+  serverTimestamp?: firebase.firestore.FieldValue
   email?: string;
   rating?: number; // Internal elo rating (ex. 1200)
   honor?: number; // Measure of sportsmanship [0, 1]

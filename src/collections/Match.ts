@@ -10,7 +10,7 @@ export interface MatchUser {
 export default interface Match {
   id: string;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.Timestamp;
+  serverTimestamp?: firebase.firestore.FieldValue;
   gameId?: string;
   matchFound?: boolean;
   ranked?: boolean;

@@ -23,5 +23,5 @@ export default interface User {
 
   rank?: Rank;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.Timestamp;
+  serverTimestamp?: firebase.firestore.FieldValue;
 }

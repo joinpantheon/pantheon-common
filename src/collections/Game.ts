@@ -17,13 +17,13 @@ export interface QuestionResponseInfo {
   userId?: string;
   questionResponseText?: string;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.Timestamp;
+  serverTimestamp?: firebase.firestore.FieldValue;
 }
 
 export interface QuestionBuzzerInfo {
   userId?: string;
 	creationDatetime?: number;
-	serverTimestamp?: firebase.firestore.Timestamp;
+	serverTimestamp?: firebase.firestore.FieldValue;
 }
 
 export default interface Game {
@@ -32,8 +32,8 @@ export default interface Game {
   gameDurationMs?: number; // Length of game in ms
   gameEndDatetime?: number;
   gameStartDatetime?: number;
-  gameStartServerTimestamp?: firebase.firestore.Timestamp;
-  gameEndServerTimestamp?: firebase.firestore.Timestamp;
+  gameStartServerTimestamp?: firebase.firestore.FieldValue;
+  gameEndServerTimestamp?: firebase.firestore.FieldValue;
   isCompleted?: boolean;
   leaverId?: string;
   playerLeft?: boolean;

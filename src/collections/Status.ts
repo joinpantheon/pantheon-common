@@ -3,6 +3,6 @@ import State from '../enums/State';
 
 export default interface Status {
   userId: string;
-  lastChanged: firebase.firestore.Timestamp;
+  lastChanged: firebase.firestore.FieldValue;
   state: State;
 }
