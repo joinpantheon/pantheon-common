@@ -1,3 +1,4 @@
+import QuestionError from "../enums/QuestionError";
 import QuestionType from "../enums/QuestionType";
 import ResponseType from "../enums/ResponseType";
 import Subject from "../enums/Subject";
@@ -6,6 +7,7 @@ export default interface QuestionAnswer {
   id: string;
   answerText?: string;
   details?: string; // Any extra information from source that might be useful
+  errors?: QuestionError[];
   index?: number; // Used to randomly pick questions
   previousIds?: string[]; // List of previous ids, in case we update id
   questionText?: string;
