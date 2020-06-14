@@ -1,4 +1,4 @@
-import Subject from '../enums/QuestionSubject';
+import QuestionSubject from '../enums/QuestionSubject';
 
 export default interface QuestionResponse {
   id: string;
@@ -12,5 +12,5 @@ export default interface QuestionResponse {
   questionResponderUserName?: string;
   questionResponseText?: string;
   questionText?: string;
-  questionSubject?: Subject;
+  questionSubject?: QuestionSubject;
 }

@@ -1,4 +1,4 @@
-import Subject from "../enums/QuestionSubject";
+import QuestionSubject from "../enums/QuestionSubject";
 
 export default interface Question {
   id: string;
@@ -8,7 +8,7 @@ export default interface Question {
   questionText?: string;
   responseType?: string; // Multiple choice or short answer
   source?: string; // Where the question came from
-  subject?: Subject; // Ex. physics
+  subject?: QuestionSubject; // Ex. physics
 }
 
 // Can't send answer text to frontend or else there might be some cheating :)
