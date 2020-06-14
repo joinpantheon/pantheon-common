@@ -1,4 +1,4 @@
-import Subject from "../enums/Subject";
+import Subject from "../enums/QuestionSubject";
 
 export default interface Question {
   id: string;

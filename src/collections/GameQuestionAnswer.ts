@@ -1,5 +1,5 @@
+import QuestionSubject from "../enums/QuestionSubject";
 import ResponseType from "../enums/ResponseType";
-import Subject from "../enums/Subject";
 
 export default interface GameQuestionAnswer {
   id: string;
@@ -8,7 +8,7 @@ export default interface GameQuestionAnswer {
   questionAnswerId?: string;
   questionNumber?: number;
   questionResponseType?: ResponseType;
-  questionSubject?: Subject;
+  questionSubject?: QuestionSubject;
   questionText?: string;
   questionSource?: string;
 }

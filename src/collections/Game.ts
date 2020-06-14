@@ -1,4 +1,4 @@
-import Subject from "../enums/Subject";
+import GameSubject from "../enums/GameSubject";
 import { Rank } from "./User";
 
 export interface GameUser {
@@ -53,7 +53,7 @@ export default interface Game {
     }
   };
   ranked?: boolean;
-  subjects?: Subject[];
+  subjects?: GameSubject[];
   user1?: GameUser; // User id, user name, score
   user2?: GameUser;
 }

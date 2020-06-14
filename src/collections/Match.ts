@@ -1,5 +1,5 @@
 import * as firebase from 'firebase';
-import Subject from "../enums/Subject";
+import GameSubject from "../enums/GameSubject";
 
 export interface MatchUser {
   id: string;
@@ -14,7 +14,8 @@ export default interface Match {
   gameId?: string;
   matchFound?: boolean;
   ranked?: boolean;
-  subjects?: Subject[];
+  subjects?: GameSubject[];
+  numQuestions?: number;
   user1?: MatchUser;
   user2?: MatchUser;
 }

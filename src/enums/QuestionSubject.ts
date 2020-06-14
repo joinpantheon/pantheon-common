@@ -1,4 +1,4 @@
-enum Subject {
+enum QuestionSubject {
   Biology = 'Biology',
   Chemistry = 'Chemistry',
   Computer = 'Computer',
@@ -13,7 +13,6 @@ enum Subject {
   BiologyChemistry = 'Biochemistry',
   ChemistryPhysics = 'Physical science',
   EarthSpace = 'Earth and space',
-  All = 'All' // deprecated, for backwards compatibility
 }
 
-export default Subject;
+export default QuestionSubject;
