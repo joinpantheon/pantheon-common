@@ -1,14 +1,12 @@
+import * as firebase from 'firebase';
+
 export default interface UserPrivate {
   id: string; // needs to be unique
-  username: string; // needs to be unique
-  city?: string;
-  email?: string;
-  firstName?: string;
-  lastName?: string;
-  name?: string; // deprecated, need to change users in actual firebase db
-  rating?: number; // Internal elo rating (ex. 1200)
-  school?: string;
-  state?: string;
+  userId: string;
   referrer?: string;
   creationDatetime?: number;
+  serverTimestamp?: firebase.firestore.FieldValue
+  email?: string;
+  rating?: number; // Internal elo rating (ex. 1200)
+  honor?: number; // Measure of sportsmanship [0, 1]
 }

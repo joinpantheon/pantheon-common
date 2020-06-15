@@ -1,7 +1,7 @@
 import QuestionError from "../enums/QuestionError";
+import QuestionSubject from "../enums/QuestionSubject";
 import QuestionType from "../enums/QuestionType";
 import ResponseType from "../enums/ResponseType";
-import Subject from "../enums/Subject";
 
 export default interface QuestionAnswer {
   id: string;
@@ -14,7 +14,7 @@ export default interface QuestionAnswer {
   questionType?: QuestionType; // Tossup or bonus
   responseType?: ResponseType; // Multiple choice or short answer
   source?: string; // Where the question came from
-  subject?: Subject;
+  subject?: QuestionSubject;
   uploader?: string; // Who uploaded the question/aggregator name
   url?: string; // Source url
 }

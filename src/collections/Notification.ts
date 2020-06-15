@@ -1,9 +1,9 @@
+import GameSubject from "../enums/GameSubject";
 import NotificationType from "../enums/NotificationType";
-import Subject from "../enums/Subject";
 
 interface GameMatchMessage {
   matchId: string;
-  subject?: Subject;
+  subjects?: GameSubject[];
   requestAccepted?: boolean;
 }
 

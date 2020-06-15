@@ -1,10 +1,13 @@
-export interface SubjectStats {
+export interface GameStats {
   numGames?: number;
   numGamesWon?: number;
   numGamesLost?: number;
   numGamesDrawn?: number;
   numGamesLeft?: number;
   numGamesWonByDefault?: number;
+}
+
+export interface QuestionStats {
   numQuestionsSeen?: number;
   numQuestionsCorrect?: number;
   numQuestionsIncorrect?: number;
@@ -17,14 +20,15 @@ export default interface Stats {
   userId: string;
   username: string;
   totalTime?: number;
-  allSubjects?: SubjectStats;
-  biology?: SubjectStats;
-  chemistry?: SubjectStats;
-  computer?: SubjectStats;
-  earth?: SubjectStats;
-  energy?: SubjectStats;
-  math?: SubjectStats;
-  physics?: SubjectStats;
-  space?: SubjectStats;
-  generalKnowledge?: SubjectStats;
+  gameStats?: GameStats;
+  allSubjects?: QuestionStats;
+  biology?: QuestionStats;
+  chemistry?: QuestionStats;
+  computer?: QuestionStats;
+  earth?: QuestionStats;
+  energy?: QuestionStats;
+  math?: QuestionStats;
+  physics?: QuestionStats;
+  space?: QuestionStats;
+  generalKnowledge?: QuestionStats;
 }

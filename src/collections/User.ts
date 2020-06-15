@@ -1,3 +1,4 @@
+import * as firebase from 'firebase';
 import Division from "../enums/Division";
 import Tier from "../enums/Tier";
 
@@ -8,15 +9,19 @@ export interface Rank {
 }
 
 export default interface User {
+  // required on signup
   id: string; // needs to be unique
-  username: string; // needs to be unique
-  creationDatetime?: number;
-  city?: string;
-  experience?: number; // Measure of W/L ratio + time spent [0, inf)
-  honor?: number; // Measure of sportsmanship [0, 1]
-  rank?: Rank;
+  username: string; // unique, but changeable
+  normalizedUsername: string; // lowercase version for search   
   school?: string;
+  city?: string;
   state?: string;
-}
 
-// TODO?: should honor be private?
+  // optional on signup
+  firstName?: string;
+  lastName?: string; 
+
+  rank?: Rank;
+  creationDatetime?: number;
+  serverTimestamp?: firebase.firestore.FieldValue;
+}
