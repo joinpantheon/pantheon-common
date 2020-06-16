@@ -1,17 +1,30 @@
 export { default as Chat, Message } from './collections/Chat';
 export { default as Friendship } from './collections/Friendship';
-export { default as Game, GameUser, QuestionBuzzerInfo, QuestionResponseInfo } from './collections/Game';
+export {
+  default as Game,
+  GameUser,
+  QuestionBuzzerInfo,
+  QuestionResponseInfo
+} from './collections/Game';
 export { default as GameQuestionAnswer } from './collections/GameQuestionAnswer';
 export { default as Match, MatchUser } from './collections/Match';
 export { default as Notification } from './collections/Notification';
 export { default as QuestionAnswer } from './collections/QuestionAnswer';
 export { default as QuestionReport } from './collections/QuestionReport';
-export { default as Stats, GameStats, QuestionStats } from './collections/Stats';
+export {
+  default as Stats,
+  GameStats,
+  QuestionStats
+} from './collections/Stats';
 export { default as Status } from './collections/Status';
 export { default as User, Rank } from './collections/User';
 export { default as UserPrivate } from './collections/UserPrivate';
 export { default as UserReport } from './collections/UserReport';
-export { DEFAULT_RATING, QUESTION_DELAY_MS, QUESTION_TIMEOUT_MS } from './constants';
+export {
+  DEFAULT_RATING,
+  QUESTION_DELAY_MS,
+  QUESTION_TIMEOUT_MS
+} from './constants';
 export { default as Answer } from './deprecated/Answer';
 export { default as Question } from './deprecated/Question';
 export { default as QuestionResponse } from './deprecated/QuestionResponse';
@@ -31,5 +44,5 @@ export { default as UserReportReason } from './enums/UserReportReason';
 export { default as Database } from './types/Database';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
+export { toArray } from './utils/general';
 export { default as StringMetric } from './utils/StringMetric';
-
