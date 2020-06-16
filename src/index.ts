@@ -1,9 +1,8 @@
-export { default as Chat } from './collections/Chat';
+export { default as Chat, Message } from './collections/Chat';
 export { default as Friendship } from './collections/Friendship';
 export { default as Game, GameUser, QuestionBuzzerInfo, QuestionResponseInfo } from './collections/Game';
 export { default as GameQuestionAnswer } from './collections/GameQuestionAnswer';
 export { default as Match, MatchUser } from './collections/Match';
-export { default as Message } from './collections/Message';
 export { default as Notification } from './collections/Notification';
 export { default as QuestionAnswer } from './collections/QuestionAnswer';
 export { default as QuestionReport } from './collections/QuestionReport';

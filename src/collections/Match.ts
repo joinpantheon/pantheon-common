@@ -2,7 +2,7 @@ import * as firebase from 'firebase';
 import GameSubject from "../enums/GameSubject";
 
 export interface MatchUser {
-  id: string;
+  userId: string;
   username: string;
   accepted: boolean;
 }

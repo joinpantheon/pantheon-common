@@ -3,7 +3,6 @@ import Friendship from "../collections/Friendship";
 import Game from "../collections/Game";
 import GameQuestionAnswer from "../collections/GameQuestionAnswer";
 import Match from "../collections/Match";
-import Message from "../collections/Message";
 import Notification from "../collections/Notification";
 import QuestionAnswer from "../collections/QuestionAnswer";
 import QuestionReport from "../collections/QuestionReport";
@@ -13,7 +12,7 @@ import UserPrivate from "../collections/UserPrivate";
 import UserReport from "../collections/UserReport";
 
 type Document = Chat | Friendship | Game | GameQuestionAnswer | Match | 
-  Message | Notification | QuestionAnswer | Stats | QuestionReport | User | 
+  Notification | QuestionAnswer | Stats | QuestionReport | User | 
   UserPrivate | UserReport;
 
 export default Document;
