@@ -25,9 +25,20 @@ export {
   QUESTION_DELAY_MS,
   QUESTION_TIMEOUT_MS
 } from './constants';
-export { default as Answer } from './deprecated/Answer';
-export { default as Question } from './deprecated/Question';
-export { default as QuestionResponse } from './deprecated/QuestionResponse';
+export { default as Database } from './database/Database';
+export {
+  DbOrderBy,
+  DbOrderByDirection,
+  DbWhere,
+  DbWhereOperator,
+  default as DbGetOpts
+} from './database/DbGetOpts';
+export {
+  dbCopyCollection,
+  dbGetCollection,
+  dbUpdate,
+  dbWrite
+} from './database/utils';
 export { default as CollectionName } from './enums/CollectionName';
 export { default as Division } from './enums/Division';
 export { default as GameSubject } from './enums/GameSubject';
@@ -41,7 +52,6 @@ export { default as ResponseType } from './enums/ResponseType';
 export { default as State } from './enums/State';
 export { default as Tier } from './enums/Tier';
 export { default as UserReportReason } from './enums/UserReportReason';
-export { default as Database } from './types/Database';
 export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { toArray } from './utils/general';
