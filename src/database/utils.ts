@@ -51,6 +51,7 @@ export function dbGet(db: Database, collection: CollectionName, docId: string) {
  * @param db Database to get gata from
  * @param collection Name of collection to get data from
  * @param opts Object containing possible filters for get query
+ * TODO: check filters to see if they are valid (https://firebase.google.com/docs/firestore/query-data/order-limit-data)
  */
 export function dbGetMultiple(db: Database, collection: CollectionName, 
     opts: DbGetOpts={}) {
