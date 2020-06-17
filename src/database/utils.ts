@@ -5,6 +5,9 @@ import { toArray } from "../utils/general";
 import Database from "./Database";
 import DbGetOpts from "./DbGetOpts";
 
+type Firestore = firebase.firestore.Firestore;
+type Query = firebase.firestore.Query<firebase.firestore.DocumentData>;
+
 /**
  * Write data to given collection in db. 
  * @param db Database to write to
@@ -13,10 +16,11 @@ import DbGetOpts from "./DbGetOpts";
  */
 export function dbWrite(db: Database, collection: CollectionName, 
     doc: Document): Promise<void> {
-  return db
+  return (db as Firestore)
     .collection(collection)
     .doc(doc.id)
-    .set(doc);
+    .set(doc)
+    .then(() => {});
 }
 
 /**
@@ -27,10 +31,11 @@ export function dbWrite(db: Database, collection: CollectionName,
  */
 export function dbUpdate(db: Database, collection: CollectionName, 
     doc: Document): Promise<void> {
-  return db
+  return (db as Firestore)
     .collection(collection)
     .doc(doc.id)
-    .update(doc);
+    .update(doc)
+    .then(() => {});
 }
 
 /**
@@ -40,7 +45,7 @@ export function dbUpdate(db: Database, collection: CollectionName,
  * @param docId Id of document to retrieve
  */
 export function dbGet(db: Database, collection: CollectionName, docId: string) {
-  return db
+  return (db as Firestore)
     .collection(collection)
     .doc(docId)
     .get();
@@ -55,8 +60,8 @@ export function dbGet(db: Database, collection: CollectionName, docId: string) {
  */
 export function dbGetMultiple(db: Database, collection: CollectionName, 
     opts: DbGetOpts={}) {
-  const ref = db.collection(collection);
-  let query: firebase.firestore.Query<firebase.firestore.DocumentData> = ref;
+  const ref = (db as Firestore).collection(collection);
+  let query: Query = ref;
 
   // Handle where
   if (opts.where) {
