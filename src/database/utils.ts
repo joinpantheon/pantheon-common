@@ -34,12 +34,25 @@ export function dbUpdate(db: Database, collection: CollectionName,
 }
 
 /**
- * Get query snapshot of given collection.
+ * Get document from db.
+ * @param db Database to get document from
+ * @param collection Name of collection to get data from
+ * @param docId Id of document to retrieve
+ */
+export function dbGet(db: Database, collection: CollectionName, docId: string) {
+  return db
+    .collection(collection)
+    .doc(docId)
+    .get();
+}
+
+/**
+ * Get multiple documents from db.
  * @param db Database to get gata from
  * @param collection Name of collection to get data from
  * @param opts Object containing possible filters for get query
  */
-export function dbGetCollection(db: Database, collection: CollectionName, 
+export function dbGetMultiple(db: Database, collection: CollectionName, 
     opts: DbGetOpts={}) {
   const ref = db.collection(collection);
   let query: firebase.firestore.Query<firebase.firestore.DocumentData> = ref;
@@ -77,7 +90,7 @@ export function dbGetCollection(db: Database, collection: CollectionName,
  */
 export async function dbCopyCollection(db1: Database, db2: Database, 
     collection: CollectionName) {
-  const snapshot = await dbGetCollection(db1, collection);
+  const snapshot = await dbGetMultiple(db1, collection);
   const writes = snapshot.docs.map(doc => 
     dbWrite(db2, collection, doc.data() as Document));
   return Promise.all(writes);
