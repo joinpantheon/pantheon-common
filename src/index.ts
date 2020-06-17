@@ -25,7 +25,7 @@ export {
   QUESTION_DELAY_MS,
   QUESTION_TIMEOUT_MS
 } from './constants';
-export { default as Database } from './database/Database';
+export { AdminDb, ClientDb, Database } from './database/Database';
 export {
   DbOrderBy,
   DbOrderByDirection,
@@ -34,7 +34,6 @@ export {
   default as DbGetOpts
 } from './database/DbGetOpts';
 export {
-  dbCopyCollection,
   dbGet,
   dbGetMultiple,
   dbUpdate,
