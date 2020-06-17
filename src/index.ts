@@ -35,7 +35,8 @@ export {
 } from './database/DbGetOpts';
 export {
   dbCopyCollection,
-  dbGetCollection,
+  dbGet,
+  dbGetMultiple,
   dbUpdate,
   dbWrite
 } from './database/utils';
@@ -56,3 +57,4 @@ export { default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { toArray } from './utils/general';
 export { default as StringMetric } from './utils/StringMetric';
+
