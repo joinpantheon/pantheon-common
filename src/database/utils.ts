@@ -2,13 +2,8 @@ import * as firebase from 'firebase/app';
 import CollectionName from "../enums/CollectionName";
 import Document from "../types/Document";
 import { toArray } from "../utils/general";
-import Database from "./Database";
+import { AdminDb, ClientDb, Database } from './Database';
 import DbGetOpts from "./DbGetOpts";
-
-type AdminDb = FirebaseFirestore.Firestore;
-type ClientDb = firebase.firestore.Firestore;
-type Query = FirebaseFirestore.Query<FirebaseFirestore.DocumentData> | 
-  firebase.firestore.Query<firebase.firestore.DocumentData>;
 
 /**
  * Write data to given collection in db. 
@@ -66,6 +61,8 @@ export function dbGetMultiple(db: AdminDb,  collection: CollectionName, opts?: D
 export function dbGetMultiple(db: ClientDb, collection: CollectionName, opts?: DbGetOpts): Promise<firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData>>
 export function dbGetMultiple(db: Database, collection: CollectionName, opts: DbGetOpts={}) {
   const ref = db.collection(collection);
+  type Query = FirebaseFirestore.Query<FirebaseFirestore.DocumentData> | 
+    firebase.firestore.Query<firebase.firestore.DocumentData>;
   let query: Query = ref;
 
   // Handle where
