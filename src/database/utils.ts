@@ -36,6 +36,21 @@ export function dbUpdate(db: Database, collection: CollectionName, doc: Document
 }
 
 /**
+ * Delete document from db.
+ * @param db Database to delete document from
+ * @param collection Name of collection to delete doc from
+ * @param docId Id of document to delete
+ */
+export function dbDelete(db: AdminDb,  collection: CollectionName, docId: string): Promise<FirebaseFirestore.WriteResult>;
+export function dbDelete(db: ClientDb, collection: CollectionName, docId: string): Promise<void>;
+export function dbDelete(db: Database, collection: CollectionName, docId: string) {
+  return db
+    .collection(collection)
+    .doc(docId)
+    .delete();
+}
+
+/**
  * Get document from db.
  * @param db Database to get document from
  * @param collection Name of collection to get data from

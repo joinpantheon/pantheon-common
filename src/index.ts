@@ -34,6 +34,7 @@ export {
   default as DbGetOpts
 } from './database/DbGetOpts';
 export {
+  dbDelete,
   dbGet,
   dbGetMultiple,
   dbUpdate,
