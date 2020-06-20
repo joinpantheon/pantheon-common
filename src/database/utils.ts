@@ -11,9 +11,9 @@ import DbGetOpts from "./DbGetOpts";
  * @param collection Name of collection to write to
  * @param doc Document data to write to db
  */
-export function dbWrite(db: AdminDb,  collection: CollectionName, doc: Document): Promise<FirebaseFirestore.WriteResult>;
-export function dbWrite(db: ClientDb, collection: CollectionName, doc: Document): Promise<void>;
-export function dbWrite(db: Database, collection: CollectionName, doc: Document) {
+export function dbWrite<T extends CollectionName>(db: AdminDb,  collection: T, doc: Document<T>): Promise<FirebaseFirestore.WriteResult>;
+export function dbWrite<T extends CollectionName>(db: ClientDb, collection: T, doc: Document<T>): Promise<void>;
+export function dbWrite<T extends CollectionName>(db: Database, collection: T, doc: Document<T>) {
   return db
     .collection(collection)
     .doc(doc.id)
@@ -26,9 +26,9 @@ export function dbWrite(db: Database, collection: CollectionName, doc: Document)
  * @param collection Name of collection to update
  * @param doc Document data to update existing doc with
  */
-export function dbUpdate(db: AdminDb,  collection: CollectionName, doc: Document): Promise<FirebaseFirestore.WriteResult>;
-export function dbUpdate(db: ClientDb, collection: CollectionName, doc: Document): Promise<void>;
-export function dbUpdate(db: Database, collection: CollectionName, doc: Document) {
+export function dbUpdate<T extends CollectionName>(db: AdminDb,  collection: T, doc: Document<T>): Promise<FirebaseFirestore.WriteResult>;
+export function dbUpdate<T extends CollectionName>(db: ClientDb, collection: T, doc: Document<T>): Promise<void>;
+export function dbUpdate<T extends CollectionName>(db: Database, collection: T, doc: Document<T>) {
   return db
     .collection(collection)
     .doc(doc.id)
