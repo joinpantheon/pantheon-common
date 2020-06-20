@@ -53,7 +53,7 @@ export { default as ResponseType } from './enums/ResponseType';
 export { default as State } from './enums/State';
 export { default as Tier } from './enums/Tier';
 export { default as UserReportReason } from './enums/UserReportReason';
-export { default as Document } from './types/Document';
+export { AnyDocument, default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { toArray } from './utils/general';
 export { default as StringMetric } from './utils/StringMetric';
