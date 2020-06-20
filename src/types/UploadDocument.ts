@@ -1,11 +1,11 @@
 import { FieldValue } from "@google-cloud/firestore";
-import Document from "./Document";
+import { AnyDocument } from "./Document";
 
 type Upload = {
   id: string;
   [key: string]: string | FieldValue;
 }
 
-type UploadDocument = Document | Upload;
+type UploadDocument = AnyDocument | Upload;
 
 export default UploadDocument;
