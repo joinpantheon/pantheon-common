@@ -6,11 +6,11 @@ enum MessageType {
   Notification_DEPR = "NOTIFICATION",
   QuestionReport_DEPR = "QUESTION_REPORT",
   
-  Chat = "Chat",
+  Chat            = "Chat",
   IncorrectAnswer = "Incorrect Answer",
-  CorrectAnswer = "Correct Answer",
-  Notification = "Notification",
-  QuestionReport = "Question Report"
+  CorrectAnswer   = "Correct Answer",
+  Notification    = "Notification",
+  QuestionReport  = "Question Report"
 }
 
 export default MessageType

@@ -1,5 +1,5 @@
 enum QuestionType {
-  Bonus = "Bonus",
+  Bonus  = "Bonus",
   Tossup = "Tossup"
 }
 

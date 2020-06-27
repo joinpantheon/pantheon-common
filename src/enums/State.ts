@@ -1,8 +1,8 @@
 enum State {
-  Active = 'online',
-  InGame = 'in-game',
+  Active   = 'online',
+  InGame   = 'in-game',
   Inactive = 'inactive',
-  Offline = 'offline'
+  Offline  = 'offline'
 }
 
 export default State;

@@ -17,18 +17,19 @@ type AnyDocument = Chat | Friendship | Game | GameQuestionAnswer | Match |
   UserPrivate | UserReport;
 
 type Document<T> = 
-  T extends CollectionName.Chats               ? Chat :
-  T extends CollectionName.Friendships         ? Friendship :
+  T extends CollectionName.Chats               ? Chat               :
+  T extends CollectionName.Friendships         ? Friendship         :
   T extends CollectionName.GameQuestionAnswers ? GameQuestionAnswer :
-  T extends CollectionName.Games               ? Game :
-  T extends CollectionName.Matches             ? Match :
-  T extends CollectionName.Notifications       ? Notification :
-  T extends CollectionName.QuestionAnswers     ? QuestionAnswer :
-  T extends CollectionName.QuestionReports     ? QuestionReport :
-  T extends CollectionName.Stats               ? Stats :
-  T extends CollectionName.UserReports         ? UserReport :
-  T extends CollectionName.Users               ? User : 
-  T extends CollectionName.UsersPrivate        ? UserPrivate :
+  T extends CollectionName.Games               ? Game               :
+  T extends CollectionName.Matches             ? Match              :
+  T extends CollectionName.Notifications       ? Notification       :
+  T extends CollectionName.QuestionAnswers     ? QuestionAnswer     :
+  T extends CollectionName.QuestionReports     ? QuestionReport     :
+  T extends CollectionName.Stats               ? Stats              :
+  T extends CollectionName.UserReports         ? UserReport         :
+  T extends CollectionName.Users               ? User               : 
+  T extends CollectionName.UsersPrivate        ? UserPrivate        :
   never;
 
 export { Document as default, AnyDocument };
+

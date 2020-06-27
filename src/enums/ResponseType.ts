@@ -1,6 +1,6 @@
 enum ResponseType {
   MultipleChoice = 'Multiple Choice',
-  ShortAnswer = 'Short Answer'
+  ShortAnswer    = 'Short Answer'
 }
 
 export default ResponseType;
