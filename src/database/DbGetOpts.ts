@@ -1,3 +1,5 @@
+import { OrderByDirection, WhereFilterOp } from "@firebase/firestore-types";
+
 export default interface DbGetOpts {
   orderBy?: DbOrderBy | DbOrderBy[];
   where?: DbWhere | DbWhere[];
@@ -6,17 +8,11 @@ export default interface DbGetOpts {
 
 export interface DbOrderBy {
   field: string,
-  direction?: DbOrderByDirection
+  direction?: OrderByDirection
 }
 
 export interface DbWhere {
   field: string;
-  operator: DbWhereOperator;
+  operator: WhereFilterOp;
   value: string | number;
 }
-
-type DbOrderByDirection = 'asc' | 'desc';
-type DbWhereOperator = '<' | '<=' | '==' | '>=' | '>' | 'array-contains' | 
-  'in' | 'array-contains-any';
-
-export { DbOrderByDirection, DbWhereOperator };

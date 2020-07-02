@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import { FieldValue } from "@firebase/firestore-types";
 import GameSubject from "../enums/GameSubject";
 
 export interface MatchUser {
@@ -10,7 +10,7 @@ export interface MatchUser {
 export default interface Match {
   id: string;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.FieldValue;
+  serverTimestamp?: FieldValue;
   gameId?: string;
   matchFound?: boolean;
   ranked?: boolean;

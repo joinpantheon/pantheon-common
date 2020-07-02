@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import { FieldValue } from "@firebase/firestore-types";
 import Division from "../enums/Division";
 import Tier from "../enums/Tier";
 
@@ -23,5 +23,5 @@ export default interface User {
 
   rank?: Rank;
   creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.FieldValue;
+  serverTimestamp?: FieldValue;
 }
