@@ -14,11 +14,11 @@ export interface GameUser {
 }
 
 export interface GameResponse {
-  userId?: string;
-  questionNumber: number;
-  questionResponseText?: string;
-  isCorrect?: boolean;
   buzzTimestamp?: FieldValue;
+  isCorrect?: boolean;
+  questionNumber: number;
+  responseText?: string;
+  userId?: string;
 }
 
 export default interface Game {
