@@ -1,45 +1,20 @@
 export { default as Chat, Message } from './collections/Chat';
 export { default as Friendship } from './collections/Friendship';
-export {
-  default as Game,
-  GameUser,
-  QuestionBuzzerInfo,
-  QuestionResponseInfo
-} from './collections/Game';
+export { default as Game, GameBuzz, GameResponse, GameResponses, GameUser } from './collections/Game';
 export { default as GameQuestionAnswer } from './collections/GameQuestionAnswer';
 export { default as Match, MatchUser } from './collections/Match';
 export { default as Notification } from './collections/Notification';
 export { default as QuestionAnswer } from './collections/QuestionAnswer';
 export { default as QuestionReport } from './collections/QuestionReport';
-export {
-  default as Stats,
-  GameStats,
-  QuestionStats
-} from './collections/Stats';
+export { default as Stats, GameStats, QuestionStats } from './collections/Stats';
 export { default as Status } from './collections/Status';
 export { default as User, Rank } from './collections/User';
 export { default as UserPrivate } from './collections/UserPrivate';
 export { default as UserReport } from './collections/UserReport';
-export {
-  DEFAULT_RATING,
-  QUESTION_DELAY_MS,
-  QUESTION_TIMEOUT_MS
-} from './constants';
+export { DEFAULT_RATING, QUESTION_DELAY_MS, QUESTION_TIMEOUT_MS } from './constants';
 export { AdminDb, ClientDb, Database } from './database/Database';
-export {
-  DbOrderBy,
-  DbOrderByDirection,
-  DbWhere,
-  DbWhereOperator,
-  default as DbGetOpts
-} from './database/DbGetOpts';
-export {
-  dbDelete,
-  dbGet,
-  dbGetMultiple,
-  dbUpdate,
-  dbWrite
-} from './database/utils';
+export { DbOrderBy, DbWhere, default as DbGetOpts } from './database/DbGetOpts';
+export { dbDelete, dbGet, dbGetMultiple, dbUpdate, dbWrite } from './database/utils';
 export { default as CollectionName } from './enums/CollectionName';
 export { default as Division } from './enums/Division';
 export { default as GameSubject } from './enums/GameSubject';
@@ -58,4 +33,3 @@ export { AnyDocument, default as Document } from './types/Document';
 export { default as UploadDocument } from './types/UploadDocument';
 export { toArray } from './utils/general';
 export { default as StringMetric } from './utils/StringMetric';
-
