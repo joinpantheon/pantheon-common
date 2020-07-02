@@ -13,25 +13,17 @@ export interface GameUser {
   pointsChange?: number
 }
 
-export interface GameBuzz {
-  buzzed?: boolean;
-  questionNumber?: number;
-  serverTimestamp?: FieldValue;
-  userId?: string;
-}
-
 export interface GameResponse {
   userId?: string;
   questionNumber: number;
   questionResponseText?: string;
   isCorrect?: boolean;
-	serverTimestamp?: FieldValue;
+  buzzTimestamp?: FieldValue;
 }
 
 export default interface Game {
   id: string;
   chatId: string;
-  buzzes: GameBuzz[];
   gameDurationMs?: number; // Length of game in ms
   gameEndDatetime?: number;
   gameStartDatetime?: number;
