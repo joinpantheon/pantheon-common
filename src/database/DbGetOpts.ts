@@ -12,7 +12,7 @@ export interface DbOrderBy {
 export interface DbWhere {
   field: string;
   operator: DbWhereOperator;
-  value: string | number;
+  value: any;
 }
 
 type DbOrderByDirection = 'asc' | 'desc';
