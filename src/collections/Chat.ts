@@ -11,7 +11,9 @@ export interface Message {
 
 export default interface Chat {
   id: string;
-  gameId?: string;
+  userIds?: string[];
+  private?: boolean;
   creationDatetime?: number;
   messages?: Message[];
+  gameId?: string;
 }

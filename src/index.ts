@@ -20,11 +20,6 @@ export { default as Status } from './collections/Status';
 export { default as User, Rank } from './collections/User';
 export { default as UserPrivate } from './collections/UserPrivate';
 export { default as UserReport } from './collections/UserReport';
-export {
-  DEFAULT_RATING,
-  QUESTION_DELAY_MS,
-  QUESTION_TIMEOUT_MS
-} from './constants';
 export { AdminDb, ClientDb, Database } from './database/Database';
 export {
   DbOrderBy,
