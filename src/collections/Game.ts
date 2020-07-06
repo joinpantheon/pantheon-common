@@ -9,16 +9,25 @@ export interface GameUser {
   school?: string;
   score?: number;
   state?: string;
+  teamId?: string;
   userId?: string;
   username?: string;
 }
 
 export interface GameResponse {
+  questionNumber: number;
+  teamId: string;
+  userId: string;
   buzzTimestamp?: FieldValue;
   isCorrect?: boolean;
-  questionNumber: number;
   responseText?: string;
-  userId?: string;
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  score: string;
+  userIds?: string[]; 
 }
 
 export default interface Game {
@@ -36,9 +45,10 @@ export default interface Game {
   ranked?: boolean;
   responses: GameResponse[];
   subjects?: GameSubject[];
-  user1?: GameUser; // User id, username, score
-  user2?: GameUser;
-}
+  teams?: Team[];
+  userIds?: string[];
+  users?: GameUser[];
+ }
 
 /*
 GameUser {
