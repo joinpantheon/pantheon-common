@@ -13,15 +13,15 @@ export default interface User {
   id: string; // needs to be unique
   username: string; // unique, but changeable
   normalizedUsername: string; // lowercase version for search   
-  school?: string;
   city?: string;
+  school?: string;
   state?: string;
 
   // optional on signup
   firstName?: string;
   lastName?: string; 
 
-  rank?: Rank;
   creationDatetime?: number;
+  rank?: Rank;
   serverTimestamp?: FieldValue;
 }

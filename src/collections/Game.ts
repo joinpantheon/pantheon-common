@@ -3,14 +3,14 @@ import GameSubject from "../enums/GameSubject";
 import { Rank } from "./User";
 
 export interface GameUser {
-  userId?: string;
-  username?: string;
   city?: string;
+  pointsChange?: number
+  rank?: Rank;
   school?: string;
   score?: number;
   state?: string;
-  rank?: Rank;
-  pointsChange?: number
+  userId?: string;
+  username?: string;
 }
 
 export interface GameResponse {
@@ -26,9 +26,9 @@ export default interface Game {
   chatId: string;
   gameDurationMs?: number; // Length of game in ms
   gameEndDatetime?: number;
+  gameEndServerTimestamp?: FieldValue;
   gameStartDatetime?: number;
   gameStartServerTimestamp?: FieldValue;
-  gameEndServerTimestamp?: FieldValue;
   isCompleted?: boolean;
   leaverId?: string;
   playerLeft?: boolean;

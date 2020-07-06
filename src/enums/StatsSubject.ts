@@ -1,4 +1,5 @@
 enum StatsSubject {
+  All       = 'allSubjects',
   Biology   = 'biology',
   Chemistry = 'chemistry',
   Computer  = 'computer',
@@ -7,8 +8,7 @@ enum StatsSubject {
   General   = 'generalKnowledge',
   Math      = 'math',
   Physics   = 'physics',
-  Space     = 'space',
-  All       = 'allSubjects'
+  Space     = 'space'
 }
 
 export default StatsSubject;

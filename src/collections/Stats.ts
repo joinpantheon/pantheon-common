@@ -19,7 +19,6 @@ export default interface Stats {
   id: string;
   userId: string;
   username: string;
-  totalTime?: number;
   gameStats?: GameStats;
   allSubjects?: QuestionStats;
   biology?: QuestionStats;
@@ -27,8 +26,9 @@ export default interface Stats {
   computer?: QuestionStats;
   earth?: QuestionStats;
   energy?: QuestionStats;
+  generalKnowledge?: QuestionStats;
   math?: QuestionStats;
   physics?: QuestionStats;
   space?: QuestionStats;
-  generalKnowledge?: QuestionStats;
+  totalTime?: number;
 }

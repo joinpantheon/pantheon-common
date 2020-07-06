@@ -1,17 +1,17 @@
 enum CollectionName {
   Chats               = "chats",
   Friendships         = "friendships",
-  Games               = "games",
   GameQuestionAnswers = "gameQuestionAnswers",
-  QuestionAnswers     = "questionAnswers",
+  Games               = "games",
   Matches             = "matches",
-  QuestionReports     = "questionReports",
-  Users               = "users",
-  UsersPrivate        = "usersPrivate",
-  UserReports         = "userReports",
   Notifications       = "notifications",
+  QuestionAnswers     = "questionAnswers",
+  QuestionReports     = "questionReports",
+  Stats               = "stats",
   Status              = "status",
-  Stats               = "stats"
+  UserReports         = "userReports",
+  Users               = "users",
+  UsersPrivate        = "usersPrivate"
 }
 
 export default CollectionName;
