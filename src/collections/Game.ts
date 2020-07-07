@@ -29,7 +29,7 @@ export interface GameResponse {
 export interface Team {
   id: string;
   name: string;
-  score?: string;
+  score?: number;
   userIds?: string[]; 
 }
 
