@@ -1,29 +1,33 @@
+import { FieldValue } from "@firebase/firestore-types";
 import GameSubject from "../enums/GameSubject";
 import { Rank } from "./User";
 
 export interface GameUser {
-  userId?: string;
-  username?: string;
   city?: string;
+  pointsChange?: number
+  rank?: Rank;
   school?: string;
   score?: number;
   state?: string;
-  
-  rank?: Rank;
-  pointsChange?: number
+  teamId?: string;
+  userId?: string;
+  username?: string;
 }
 
-export interface QuestionResponseInfo {
-  userId?: string;
-  questionResponseText?: string;
-  creationDatetime?: number;
-  serverTimestamp?: firebase.firestore.FieldValue;
+export interface GameResponse {
+  questionNumber: number;
+  teamId: string;
+  userId: string;
+  buzzTimestamp?: FieldValue;
+  isCorrect?: boolean;
+  responseText?: string;
 }
 
-export interface QuestionBuzzerInfo {
-  userId?: string;
-	creationDatetime?: number;
-	serverTimestamp?: firebase.firestore.FieldValue;
+export interface Team {
+  id: string;
+  name: string;
+  score: string;
+  userIds?: string[]; 
 }
 
 export default interface Game {
@@ -31,29 +35,52 @@ export default interface Game {
   chatId: string;
   gameDurationMs?: number; // Length of game in ms
   gameEndDatetime?: number;
+  gameEndServerTimestamp?: FieldValue;
   gameStartDatetime?: number;
-  gameStartServerTimestamp?: firebase.firestore.FieldValue;
-  gameEndServerTimestamp?: firebase.firestore.FieldValue;
+  gameStartServerTimestamp?: FieldValue;
   isCompleted?: boolean;
   leaverId?: string;
   playerLeft?: boolean;
   questionNumber?: number;
-  responseInfo?: { [questionNumberX: string]:
-    {
-      user1: {
-        incorrectResponseInfo: QuestionResponseInfo | null, 
-        correctResponseInfo: QuestionResponseInfo | null,
-        buzzerInfo: QuestionBuzzerInfo | null
-      },
-      user2: {
-        incorrectResponseInfo: QuestionResponseInfo | null, 
-        correctResponseInfo: QuestionResponseInfo | null,
-        buzzerInfo: QuestionBuzzerInfo | null
-      }
-    }
-  };
   ranked?: boolean;
+  responses: GameResponse[];
   subjects?: GameSubject[];
-  user1?: GameUser; // User id, user name, score
-  user2?: GameUser;
+  teams?: Team[];
+  userIds?: string[];
+  users?: GameUser[];
+ }
+
+/*
+GameUser {
+  indvidualScore
+  teamId
 }
+
+Team {
+  id
+  name?
+  userIds?
+  score
+}
+
+userIds: string[]
+users: GameUser[]
+teams: Team[]
+
+GameBuzz {
+  userId
+  teamId
+  buzzed
+  prevTeamIds
+  time
+}
+
+GameResponse {
+  teamId
+  userId
+  isCorrect
+  reponseText
+  time
+}
+
+*/

@@ -1,18 +1,18 @@
 export default interface Friendship {
   id: string;
   friendshipStartDatetime?: string;
+  numRankedGames?: number;
+  numRankedGamesLost?: number;
+  numRankedGamesWon?: number;
+  numTotalGames?: number;
+  numUnrankedGamesAgainst?: number;
+  numUnrankedGamesAgainstUser1Lost?: number;
+  numUnrankedGamesAgainstUser1Won?: number;
+  numUnrankedGamesAgainstUser2Lost?: number;
+  numUnrankedGamesAgainstUser2Won?: number;
+  numUnrankedGamesTogether?: number;
+  numUnrankedGamesTogetherLost?: number;
+  numUnrankedGamesTogetherWon?: number;
   user1Id?: string;
   user2Id?: string;
-  numTotalGames?: number;
-  numUnrankedGamesTogether?: number;
-  numUnrankedGamesTogetherWon?: number;
-  numUnrankedGamesTogetherLost?: number;
-  numUnrankedGamesAgainst?: number;
-  numUnrankedGamesAgainstUser1Won?: number;
-  numUnrankedGamesAgainstUser1Lost?: number;
-  numUnrankedGamesAgainstUser2Won?: number;
-  numUnrankedGamesAgainstUser2Lost?: number;
-  numRankedGames?: number;
-  numRankedGamesWon?: number;
-  numRankedGamesLost?: number;
 }

@@ -4,16 +4,16 @@ export interface Message {
   id: string;
   content?: string;
   creationDatetime?: number;
+  messageType?: MessageType;
   userId?: string;
   username?: string;
-  messageType?: MessageType;
 }
 
 export default interface Chat {
   id: string;
-  userIds?: string[];
-  private?: boolean;
   creationDatetime?: number;
-  messages?: Message[];
   gameId?: string;
+  messages?: Message[];
+  private?: boolean;
+  userIds?: string[];
 }

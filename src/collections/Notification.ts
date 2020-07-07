@@ -3,16 +3,16 @@ import NotificationType from "../enums/NotificationType";
 
 interface GameMatchMessage {
   matchId: string;
-  subjects?: GameSubject[];
   requestAccepted?: boolean;
+  subjects?: GameSubject[];
 }
 
 export default interface Notification {
   id: string;
   creationDatetime?: number;
+  data?: GameMatchMessage;
+  receiverUserId?: string;
   senderUserId?: string;
   senderUsername?: string;
-  receiverUserId?: string;
   type?: NotificationType;
-  data?: GameMatchMessage;
 }

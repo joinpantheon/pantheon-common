@@ -13,7 +13,7 @@ import UserReport from "../collections/UserReport";
 import CollectionName from "../enums/CollectionName";
 
 type AnyDocument = Chat | Friendship | Game | GameQuestionAnswer | Match | 
-  Notification | QuestionAnswer | Stats | QuestionReport | User | 
+  Notification | QuestionAnswer | QuestionReport | Stats | User | 
   UserPrivate | UserReport;
 
 type Document<T> = 
@@ -32,4 +32,3 @@ type Document<T> =
   never;
 
 export { Document as default, AnyDocument };
-

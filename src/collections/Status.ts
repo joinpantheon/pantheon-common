@@ -1,8 +1,8 @@
-import * as firebase from 'firebase';
+import { FieldValue } from "@firebase/firestore-types";
 import State from '../enums/State';
 
 export default interface Status {
-  userId: string;
-  lastChanged: firebase.firestore.FieldValue;
+  lastChanged: FieldValue;
   state: State;
+  userId: string;
 }

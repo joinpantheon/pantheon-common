@@ -1,4 +1,5 @@
 enum GameSubject {
+  All       = 'All',
   Biology   = 'Biology',
   Chemistry = 'Chemistry',
   Computer  = 'Computer',
@@ -7,8 +8,7 @@ enum GameSubject {
   General   = 'General',
   Math      = 'Math',
   Physics   = 'Physics',
-  Space     = 'Space',
-  All       = 'All'
+  Space     = 'Space'
 }
 
 export default GameSubject;

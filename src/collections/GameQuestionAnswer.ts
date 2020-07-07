@@ -3,14 +3,14 @@ import ResponseType from "../enums/ResponseType";
 
 export default interface GameQuestionAnswer {
   id: string;
-  gameId?: string;
   answerText?: string;
+  gameId?: string;
   questionAnswerId?: string;
   questionNumber?: number;
   questionResponseType?: ResponseType;
+  questionSource?: string;
   questionSubject?: QuestionSubject;
   questionText?: string;
-  questionSource?: string;
 }
 
 // TODO?: might want to add questionResponseText here
