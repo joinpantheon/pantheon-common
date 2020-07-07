@@ -26,7 +26,7 @@ export interface GameResponse {
 export interface Team {
   id: string;
   name: string;
-  score: string;
+  score?: string;
   userIds?: string[]; 
 }
 
@@ -48,39 +48,4 @@ export default interface Game {
   teams?: Team[];
   userIds?: string[];
   users?: GameUser[];
- }
-
-/*
-GameUser {
-  indvidualScore
-  teamId
 }
-
-Team {
-  id
-  name?
-  userIds?
-  score
-}
-
-userIds: string[]
-users: GameUser[]
-teams: Team[]
-
-GameBuzz {
-  userId
-  teamId
-  buzzed
-  prevTeamIds
-  time
-}
-
-GameResponse {
-  teamId
-  userId
-  isCorrect
-  reponseText
-  time
-}
-
-*/

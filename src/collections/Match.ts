@@ -1,5 +1,6 @@
 import { FieldValue } from "@firebase/firestore-types";
 import GameSubject from "../enums/GameSubject";
+import { Team } from "./Game";
 
 export interface MatchUser {
   accepted: boolean;
@@ -16,6 +17,7 @@ export default interface Match {
   ranked?: boolean;
   serverTimestamp?: FieldValue;
   subjects?: GameSubject[];
-  user1?: MatchUser;
-  user2?: MatchUser;
+  teams?: Team[];
+  userIds?: string[];
+  users?: MatchUser[];
 }
