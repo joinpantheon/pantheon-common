@@ -21,6 +21,7 @@ export interface GameResponse {
   questionSubject: QuestionSubject;
   teamId: string;
   userId: string;
+  buzzDatetime?: number;
   buzzTimestamp?: FieldValue;
   isCorrect?: boolean;
   responseText?: string;
@@ -38,9 +39,9 @@ export default interface Game {
   chatId: string;
   gameDurationMs?: number;
   gameEndDatetime?: number;
-  gameEndServerTimestamp?: FieldValue;
+  gameEndTimestamp?: FieldValue;
   gameStartDatetime?: number;
-  gameStartServerTimestamp?: FieldValue;
+  gameStartTimestamp?: FieldValue;
   isCompleted?: boolean;
   leaverId?: string;
   playerLeft?: boolean;
