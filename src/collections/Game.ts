@@ -1,6 +1,5 @@
 import { FieldValue } from "@firebase/firestore-types";
 import GameSubject from "../enums/GameSubject";
-import QuestionSubject from "../enums/QuestionSubject";
 import { Rank } from "./User";
 
 export interface GameUser {
@@ -17,8 +16,6 @@ export interface GameUser {
 
 export interface GameResponse {
   questionNumber: number;
-  // Lets us avoid fetching GameQuestionAnswer docs when computing stats
-  questionSubject: QuestionSubject;
   teamId: string;
   userId: string;
   buzzDatetime?: number;
@@ -47,7 +44,7 @@ export default interface Game {
   playerLeft?: boolean;
   questionNumber?: number;
   ranked?: boolean;
-  responses: GameResponse[];
+  responses?: GameResponse[];
   subjects?: GameSubject[];
   teams?: Team[];
   userIds?: string[];
