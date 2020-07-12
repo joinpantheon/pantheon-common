@@ -4,7 +4,7 @@ import { Rank } from "./User";
 
 export interface GameUser {
   city?: string;
-  pointsChange?: number
+  deltaPoints?: number
   rank?: Rank;
   school?: string;
   score?: number;
@@ -18,17 +18,18 @@ export interface GameResponse {
   questionNumber: number;
   teamId: string;
   userId: string;
-  startToBuzzOffsetMs?: number;
   buzzTimestamp?: FieldValue;
   isCorrect?: boolean;
   responseText?: string;
+  responseTimestamp?: FieldValue;
+  timeToBuzzMs?: number;
 }
 
 export interface Team {
   id: string;
   name: string;
   score?: number;
-  userIds?: string[]; 
+  userIds?: string[];
 }
 
 export default interface Game {
@@ -40,8 +41,7 @@ export default interface Game {
   gameStartDatetime?: number;
   gameStartTimestamp?: FieldValue;
   isCompleted?: boolean;
-  leaverId?: string;
-  playerLeft?: boolean;
+  leaverUserIds?: string[];
   questionNumber?: number;
   ranked?: boolean;
   responses?: GameResponse[];

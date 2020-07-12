@@ -9,19 +9,15 @@ export interface Rank {
 }
 
 export default interface User {
-  // required on signup
   id: string; // needs to be unique
   username: string; // unique, but changeable
   normalizedUsername: string; // lowercase version for search   
   city?: string;
-  school?: string;
-  state?: string;
-
-  // optional on signup
+  creationDatetime?: number;
   firstName?: string;
   lastName?: string; 
-
-  creationDatetime?: number;
   rank?: Rank;
+  school?: string;
   serverTimestamp?: FieldValue;
+  state?: string;
 }

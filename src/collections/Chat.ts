@@ -14,6 +14,14 @@ export default interface Chat {
   creationDatetime?: number;
   gameId?: string;
   messages?: Message[];
-  private?: boolean;
+  enabled?: boolean;
   userIds?: string[];
 }
+
+// everyone chats (lobby)
+//   --> everyone with a certain attribute (rank, subject)
+
+// userIds handles allow listing  (need some sort of function)
+
+//     --> chats restricted to some users
+//       --> DMs (1v1 chats)

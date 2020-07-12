@@ -12,6 +12,8 @@ export default interface Match {
   id: string;
   creationDatetime?: number;
   gameId?: string;
+  chatId?: string;
+  ownerUserId?: string;
   matchFound?: boolean;
   numQuestions?: number;
   ranked?: boolean;

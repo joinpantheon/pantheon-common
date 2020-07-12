@@ -14,3 +14,4 @@ export default interface GameQuestionAnswer {
 }
 
 // TODO?: might want to add questionResponseText here
+// TODO?: add this to gameDocument? consolidation (simpler) VS speed (sockets, transmitting less data)
