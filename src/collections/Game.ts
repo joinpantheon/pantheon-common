@@ -18,7 +18,7 @@ export interface GameResponse {
   questionNumber: number;
   teamId: string;
   userId: string;
-  buzzDatetime?: number;
+  startToBuzzOffsetMs?: number;
   buzzTimestamp?: FieldValue;
   isCorrect?: boolean;
   responseText?: string;
