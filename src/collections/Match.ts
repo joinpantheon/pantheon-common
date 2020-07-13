@@ -3,13 +3,13 @@ import GameSubject from "../enums/GameSubject";
 import { Team } from "./Game";
 
 export interface MatchUser {
-  accepted: boolean;
+  accepted?: boolean;
   userId: string;
   username: string;
 }
 
 export default interface Match {
-  id: string;
+  id: string; // 8 characters, deleting this document later anyway to avoid collisions
   creationDatetime?: number;
   gameId?: string;
   chatId?: string;
