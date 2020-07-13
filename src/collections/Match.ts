@@ -21,4 +21,5 @@ export default interface Match {
   subjects?: GameSubject[];
   teams?: Team[];
   users?: MatchUser[];
+  denyLinks?: string[]; // usernames with revoked permissions
 }
