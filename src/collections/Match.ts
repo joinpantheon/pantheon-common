@@ -3,6 +3,7 @@ import GameSubject from "../enums/GameSubject";
 import { Team } from "./Game";
 
 export interface MatchUser {
+  inviteCode?: string;
   accepted?: boolean;
   userId: string;
   username: string;
@@ -14,12 +15,11 @@ export default interface Match {
   gameId?: string;
   chatId?: string;
   ownerUserId?: string;
-  matchFound?: boolean;
   numQuestions?: number;
   ranked?: boolean;
   serverTimestamp?: FieldValue;
   subjects?: GameSubject[];
   teams?: Team[];
   users?: MatchUser[];
-  denyLinks?: string[]; // usernames with revoked permissions
+  inviteCodes?: string[];
 }

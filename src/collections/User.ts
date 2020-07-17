@@ -15,7 +15,8 @@ export default interface User {
   city?: string;
   creationDatetime?: number;
   firstName?: string;
-  lastName?: string; 
+  isGuest?: boolean; // ignore unique username requirement and assume no UserPrivate doc
+  lastName?: string;
   rank?: Rank;
   school?: string;
   serverTimestamp?: FieldValue;
