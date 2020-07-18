@@ -5,6 +5,7 @@ import { Rank } from "./User";
 export interface GameUser {
   city?: string;
   deltaPoints?: number
+  questionNumLeft?: number; // What question number user left on
   rank?: Rank;
   school?: string;
   score?: number;
@@ -22,7 +23,7 @@ export interface GameResponse {
   isCorrect?: boolean;
   responseText?: string;
   responseTimestamp?: FieldValue;
-  timeToBuzzMs?: number;
+  timeToBuzzMs?: number; // Time taken from start of question to buzz in
 }
 
 export interface Team {
@@ -41,7 +42,6 @@ export default interface Game {
   gameStartDatetime?: number;
   gameStartTimestamp?: FieldValue;
   isCompleted?: boolean;
-  leaverUserIds?: string[];
   questionNumber?: number;
   ranked?: boolean;
   responses?: GameResponse[];
