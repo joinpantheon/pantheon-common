@@ -13,6 +13,7 @@ import {
 } from "@google-cloud/firestore";
 import CollectionName from "../enums/CollectionName";
 import Document from "../types/Document";
+import UploadDocument from "../types/UploadDocument";
 import { toArray } from "../utils/general";
 import { AdminDb, ClientDb, Database } from './Database';
 import DbGetOpts from "./DbGetOpts";
@@ -38,9 +39,9 @@ export function dbWrite<T extends CollectionName>(db: Database, collection: T, d
  * @param collection Name of collection to update
  * @param doc Document data to update existing doc with
  */
-export function dbUpdate<T extends CollectionName>(db: AdminDb,  collection: T, doc: Document<T>): Promise<WriteResult>;
-export function dbUpdate<T extends CollectionName>(db: ClientDb, collection: T, doc: Document<T>): Promise<void>;
-export function dbUpdate<T extends CollectionName>(db: Database, collection: T, doc: Document<T>) {
+export function dbUpdate<T extends CollectionName>(db: AdminDb,  collection: T, doc: UploadDocument<T>): Promise<WriteResult>;
+export function dbUpdate<T extends CollectionName>(db: ClientDb, collection: T, doc: UploadDocument<T>): Promise<void>;
+export function dbUpdate<T extends CollectionName>(db: Database, collection: T, doc: UploadDocument<T>) {
   return db
     .collection(collection)
     .doc(doc.id)

@@ -1,7 +1,8 @@
-import * as firebase from 'firebase/app';
+import { Firestore } from "@google-cloud/firestore";
+import { firestore } from "firebase";
 
-type AdminDb = FirebaseFirestore.Firestore;
-type ClientDb = firebase.firestore.Firestore;
-type Database = firebase.firestore.Firestore | FirebaseFirestore.Firestore;
+type AdminDb = Firestore;
+type ClientDb = firestore.Firestore;
+type Database = AdminDb | ClientDb;
 
 export { AdminDb, ClientDb, Database };
