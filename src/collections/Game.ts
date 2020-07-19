@@ -35,7 +35,7 @@ export interface Team {
 
 export default interface Game {
   id: string;
-  chatId: string;
+  chatId?: string;
   gameDurationMs?: number;
   gameEndDatetime?: number;
   gameEndTimestamp?: FieldValue;
