@@ -5,4 +5,5 @@ export default interface Status {
   lastChanged: FieldValue;
   state: State;
   userId: string;
+  username: string;
 }
