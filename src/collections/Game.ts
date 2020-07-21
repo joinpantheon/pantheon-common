@@ -43,6 +43,7 @@ export default interface Game {
   gameStartTimestamp?: FieldValue;
   isCompleted?: boolean;
   numQuestions?: number;
+  numWordsRead?: number;
   questionNumber?: number;
   ranked?: boolean;
   responses?: GameResponse[];
