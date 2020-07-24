@@ -16,6 +16,8 @@ export default interface Match {
   gameId?: string;
   gameName?: string;
   inviteCodes?: string[];
+  maxNumTeams?: number;
+  maxTeamSize?: number;
   numQuestions?: number;
   ownerUserId?: string;
   ranked?: boolean;
