@@ -42,6 +42,7 @@ export default interface Game {
   gameStartDatetime?: number;
   gameStartTimestamp?: FieldValue;
   isCompleted?: boolean;
+  name?: string;
   numQuestions?: number;
   numWordsRead?: number;
   questionNumber?: number;

@@ -11,15 +11,16 @@ export interface MatchUser {
 
 export default interface Match {
   id: string; // 8 characters, deleting this document later anyway to avoid collisions
+  chatId?: string;
   creationDatetime?: number;
   gameId?: string;
-  chatId?: string;
-  ownerUserId?: string;
+  gameName?: string;
+  inviteCodes?: string[];
   numQuestions?: number;
+  ownerUserId?: string;
   ranked?: boolean;
   serverTimestamp?: FieldValue;
   subjects?: GameSubject[];
   teams?: Team[];
   users?: MatchUser[];
-  inviteCodes?: string[];
 }
