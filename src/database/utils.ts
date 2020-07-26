@@ -94,18 +94,18 @@ export function dbGetMultiple(db: Database, collection: CollectionName, opts: Db
 
   // Handle where
   if (opts.where) {
-    opts.where = toArray(opts.where);
-    for (let i = 0; i < opts.where.length; i++) {
-      const where = opts.where[i];
+    const whereOpts = toArray(opts.where);
+    for (let i = 0; i < whereOpts.length; i++) {
+      const where = whereOpts[i];
       query = query.where(where.field, where.operator, where.value);
     }
   }
   
   // Handle orderBy
   if (opts.orderBy) {
-    opts.orderBy = toArray(opts.orderBy);
-    for (let i = 0; i < opts.orderBy.length; i++) {
-      const orderBy = opts.orderBy[i];
+    const orderByOpts = toArray(opts.orderBy);
+    for (let i = 0; i < orderByOpts.length; i++) {
+      const orderBy = orderByOpts[i];
       query = query.orderBy(orderBy.field, orderBy.direction || 'asc');
     }
   }
