@@ -1,4 +1,4 @@
-import { OrderByDirection, WhereFilterOp } from "@firebase/firestore-types";
+import { OrderByDirection, WhereFilterOp } from '@firebase/firestore-types';
 
 export default interface DbGetOpts {
   orderBy?: DbOrderBy | DbOrderBy[];

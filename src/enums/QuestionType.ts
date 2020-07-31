@@ -1,6 +1,6 @@
 enum QuestionType {
-  Bonus  = "Bonus",
-  Tossup = "Tossup"
+  Bonus  = 'Bonus',
+  Tossup = 'Tossup'
 }
 
 export default QuestionType;

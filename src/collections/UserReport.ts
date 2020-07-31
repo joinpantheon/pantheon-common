@@ -1,4 +1,4 @@
-import UserReportReason from "../enums/UserReportReason";
+import UserReportReason from '../enums/UserReportReason';
 
 export default interface UserReport {
   id: string;

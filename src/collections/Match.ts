@@ -1,12 +1,19 @@
-import { FieldValue } from "@firebase/firestore-types";
-import GameSubject from "../enums/GameSubject";
-import { Team } from "./Game";
+import { FieldValue } from '@firebase/firestore-types';
+import GameSubject from '../enums/GameSubject';
+import { Team } from './Game';
+import { Rank } from './User';
 
 export interface MatchUser {
   inviteCode?: string;
   accepted?: boolean;
   userId: string;
   username: string;
+  city?: string;
+  rank?: Rank;
+  school?: string;
+  state?: string;
+  teamId?: string;
+  isGuest?: boolean;
 }
 
 export default interface Match {

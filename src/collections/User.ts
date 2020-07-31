@@ -1,6 +1,6 @@
-import { FieldValue } from "@firebase/firestore-types";
-import Division from "../enums/Division";
-import Tier from "../enums/Tier";
+import { FieldValue } from '@firebase/firestore-types';
+import Division from '../enums/Division';
+import Tier from '../enums/Tier';
 
 export interface Rank {
   tier?: Tier; // Ex. Bronze

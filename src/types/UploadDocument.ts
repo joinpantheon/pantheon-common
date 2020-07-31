@@ -1,5 +1,5 @@
-import { FieldValue } from "@google-cloud/firestore";
-import Document from "./Document";
+import { FieldValue } from '@google-cloud/firestore';
+import Document from './Document';
 
 type Upload = {
   id: string;

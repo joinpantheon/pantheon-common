@@ -1,7 +1,7 @@
-import QuestionError from "../enums/QuestionError";
-import QuestionSubject from "../enums/QuestionSubject";
-import QuestionType from "../enums/QuestionType";
-import ResponseType from "../enums/ResponseType";
+import QuestionError from '../enums/QuestionError';
+import QuestionSubject from '../enums/QuestionSubject';
+import QuestionType from '../enums/QuestionType';
+import ResponseType from '../enums/ResponseType';
 
 export default interface QuestionAnswer {
   id: string;

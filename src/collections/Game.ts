@@ -1,6 +1,6 @@
-import { FieldValue } from "@firebase/firestore-types";
-import GameSubject from "../enums/GameSubject";
-import { Rank } from "./User";
+import { FieldValue } from '@firebase/firestore-types';
+import GameSubject from '../enums/GameSubject';
+import { Rank } from './User';
 
 export interface GameUser {
   city?: string;
@@ -13,6 +13,7 @@ export interface GameUser {
   teamId?: string;
   userId?: string;
   username?: string;
+  isGuest?: boolean;
 }
 
 export interface GameResponse {
