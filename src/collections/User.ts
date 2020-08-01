@@ -1,6 +1,6 @@
-import { FieldValue } from "@firebase/firestore-types";
-import Division from "../enums/Division";
-import Tier from "../enums/Tier";
+import { FieldValue } from '@firebase/firestore-types';
+import Division from '../enums/Division';
+import Tier from '../enums/Tier';
 
 export interface Rank {
   tier?: Tier; // Ex. Bronze
@@ -10,7 +10,7 @@ export interface Rank {
 
 export default interface User {
   id: string; // needs to be unique
-  username: string; // unique, but changeable
+  username: string; // unique among isGuest=false, but changeable
   normalizedUsername: string; // lowercase version for search   
   city?: string;
   creationDatetime?: number;

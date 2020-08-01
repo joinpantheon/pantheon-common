@@ -1,5 +1,5 @@
-import QuestionSubject from "../enums/QuestionSubject";
-import ResponseType from "../enums/ResponseType";
+import QuestionSubject from '../enums/QuestionSubject';
+import ResponseType from '../enums/ResponseType';
 
 export default interface QuestionReport {
   id: string;

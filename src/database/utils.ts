@@ -1,22 +1,22 @@
 import {
-  DocumentData as ClientDocumentData,
-  DocumentSnapshot as ClientDocumentSnapshot,
-  Query as ClientQuery,
-  QuerySnapshot as ClientQuerySnapshot
-} from "@firebase/firestore-types";
+    DocumentData as ClientDocumentData,
+    DocumentSnapshot as ClientDocumentSnapshot,
+    Query as ClientQuery,
+    QuerySnapshot as ClientQuerySnapshot
+} from '@firebase/firestore-types';
 import {
-  DocumentData as AdminDocumentData,
-  DocumentSnapshot as AdminDocumentSnapshot,
-  Query as AdminQuery,
-  QuerySnapshot as AdminQuerySnapshot,
-  WriteResult
-} from "@google-cloud/firestore";
-import CollectionName from "../enums/CollectionName";
-import Document from "../types/Document";
-import UploadDocument from "../types/UploadDocument";
-import { toArray } from "../utils/general";
+    DocumentData as AdminDocumentData,
+    DocumentSnapshot as AdminDocumentSnapshot,
+    Query as AdminQuery,
+    QuerySnapshot as AdminQuerySnapshot,
+    WriteResult
+} from '@google-cloud/firestore';
+import CollectionName from '../enums/CollectionName';
+import Document from '../types/Document';
+import UploadDocument from '../types/UploadDocument';
+import { toArray } from '../utils/general';
 import { AdminDb, ClientDb, Database } from './Database';
-import DbGetOpts from "./DbGetOpts";
+import DbGetOpts from './DbGetOpts';
 
 /**
  * Write data to given collection in db. 

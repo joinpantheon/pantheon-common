@@ -1,4 +1,4 @@
-import { FieldValue } from "@firebase/firestore-types";
+import { FieldValue } from '@firebase/firestore-types';
 
 export default interface UserPrivate {
   id: string; // needs to be unique

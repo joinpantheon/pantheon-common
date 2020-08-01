@@ -1,16 +1,16 @@
-import Chat from "../collections/Chat";
-import Friendship from "../collections/Friendship";
-import Game from "../collections/Game";
-import GameQuestionAnswer from "../collections/GameQuestionAnswer";
-import Match from "../collections/Match";
-import Notification from "../collections/Notification";
-import QuestionAnswer from "../collections/QuestionAnswer";
-import QuestionReport from "../collections/QuestionReport";
-import Stats from "../collections/Stats";
-import User from "../collections/User";
-import UserPrivate from "../collections/UserPrivate";
-import UserReport from "../collections/UserReport";
-import CollectionName from "../enums/CollectionName";
+import Chat from '../collections/Chat';
+import Friendship from '../collections/Friendship';
+import Game from '../collections/Game';
+import GameQuestionAnswer from '../collections/GameQuestionAnswer';
+import Match from '../collections/Match';
+import Notification from '../collections/Notification';
+import QuestionAnswer from '../collections/QuestionAnswer';
+import QuestionReport from '../collections/QuestionReport';
+import Stats from '../collections/Stats';
+import User from '../collections/User';
+import UserPrivate from '../collections/UserPrivate';
+import UserReport from '../collections/UserReport';
+import CollectionName from '../enums/CollectionName';
 
 type AnyDocument = Chat | Friendship | Game | GameQuestionAnswer | Match | 
   Notification | QuestionAnswer | QuestionReport | Stats | User | 

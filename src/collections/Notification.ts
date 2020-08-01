@@ -1,5 +1,5 @@
-import GameSubject from "../enums/GameSubject";
-import NotificationType from "../enums/NotificationType";
+import GameSubject from '../enums/GameSubject';
+import NotificationType from '../enums/NotificationType';
 
 interface GameMatchMessage {
   matchId: string;
