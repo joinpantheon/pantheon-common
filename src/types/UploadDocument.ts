@@ -1,7 +1,11 @@
 import { FieldValue } from "@google-cloud/firestore";
+import { AnyDocument } from "./Document";
 
-type UploadDocument<T> = {
-  [K in keyof T]: T[K] | FieldValue;
-}
+/**
+ * Represents given collection object where any property (except `id`) can
+ * also be of type `FieldValue`.
+ */
+type UploadDocument<T extends AnyDocument> = 
+  Omit<{ [K in keyof T]: T[K] | FieldValue; }, 'id'> & { id: string };
 
 export default UploadDocument;
