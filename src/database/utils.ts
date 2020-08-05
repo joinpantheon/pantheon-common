@@ -1,15 +1,15 @@
 import {
-    DocumentData as ClientDocumentData,
-    DocumentSnapshot as ClientDocumentSnapshot,
-    Query as ClientQuery,
-    QuerySnapshot as ClientQuerySnapshot
+  DocumentData as ClientDocumentData,
+  DocumentSnapshot as ClientDocumentSnapshot,
+  Query as ClientQuery,
+  QuerySnapshot as ClientQuerySnapshot
 } from '@firebase/firestore-types';
 import {
-    DocumentData as AdminDocumentData,
-    DocumentSnapshot as AdminDocumentSnapshot,
-    Query as AdminQuery,
-    QuerySnapshot as AdminQuerySnapshot,
-    WriteResult
+  DocumentData as AdminDocumentData,
+  DocumentSnapshot as AdminDocumentSnapshot,
+  Query as AdminQuery,
+  QuerySnapshot as AdminQuerySnapshot,
+  WriteResult
 } from '@google-cloud/firestore';
 import CollectionName from '../enums/CollectionName';
 import Document from '../types/Document';
@@ -39,9 +39,9 @@ export function dbWrite<T extends CollectionName>(db: Database, collection: T, d
  * @param collection Name of collection to update
  * @param doc Document data to update existing doc with
  */
-export function dbUpdate<T extends CollectionName>(db: AdminDb,  collection: T, doc: UploadDocument<T>): Promise<WriteResult>;
-export function dbUpdate<T extends CollectionName>(db: ClientDb, collection: T, doc: UploadDocument<T>): Promise<void>;
-export function dbUpdate<T extends CollectionName>(db: Database, collection: T, doc: UploadDocument<T>) {
+export function dbUpdate<T extends CollectionName>(db: AdminDb,  collection: T, doc: UploadDocument<Document<T>>): Promise<WriteResult>;
+export function dbUpdate<T extends CollectionName>(db: ClientDb, collection: T, doc: UploadDocument<Document<T>>): Promise<void>;
+export function dbUpdate<T extends CollectionName>(db: Database, collection: T, doc: UploadDocument<Document<T>>) {
   return db
     .collection(collection)
     .doc(doc.id)

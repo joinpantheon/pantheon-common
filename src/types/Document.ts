@@ -12,10 +12,17 @@ import UserPrivate from '../collections/UserPrivate';
 import UserReport from '../collections/UserReport';
 import CollectionName from '../enums/CollectionName';
 
+/**
+ * Union of all collection types.
+ */
 type AnyDocument = Chat | Friendship | Game | GameQuestionAnswer | Match | 
   Notification | QuestionAnswer | QuestionReport | Stats | User | 
   UserPrivate | UserReport;
 
+/**
+ * Generic type that represents collection object corresponding to given 
+ * collection name. Ex: `Document<CollectionName.Games> = Game`.
+ */  
 type Document<T> = 
   T extends CollectionName.Chats               ? Chat               :
   T extends CollectionName.Friendships         ? Friendship         :
@@ -32,3 +39,4 @@ type Document<T> =
   never;
 
 export { Document as default, AnyDocument };
+
