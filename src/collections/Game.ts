@@ -5,6 +5,8 @@ import { Rank } from './User';
 export interface GameUser {
   city?: string;
   deltaPoints?: number
+  isBot?: boolean;
+  isGuest?: boolean;
   questionNumLeft?: number; // What question number user left on
   rank?: Rank;
   school?: string;
@@ -13,7 +15,6 @@ export interface GameUser {
   teamId?: string;
   userId?: string;
   username?: string;
-  isGuest?: boolean;
 }
 
 export interface GameResponse {

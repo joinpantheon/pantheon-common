@@ -3,7 +3,6 @@ import NotificationType from '../enums/NotificationType';
 
 interface GameMatchMessage {
   matchId: string;
-  requestAccepted?: boolean;
   subjects?: GameSubject[];
 }
 

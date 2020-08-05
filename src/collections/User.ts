@@ -16,6 +16,7 @@ export default interface User {
   creationDatetime?: number;
   firstName?: string;
   isGuest?: boolean; // ignore unique username requirement and assume no UserPrivate doc
+  isBot?: boolean; // ignore unique username requirement and assume no UserPrivate doc
   lastName?: string;
   rank?: Rank;
   school?: string;
