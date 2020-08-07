@@ -3,6 +3,8 @@ import GameSubject from '../enums/GameSubject';
 import { Rank } from './User';
 
 export interface GameUser {
+  userId: string;
+  username: string;
   city?: string;
   deltaPoints?: number
   isBot?: boolean;
@@ -13,8 +15,6 @@ export interface GameUser {
   score?: number;
   state?: string;
   teamId?: string;
-  userId?: string;
-  username?: string;
 }
 
 export interface GameResponse {

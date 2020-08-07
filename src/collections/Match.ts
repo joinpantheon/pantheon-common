@@ -4,17 +4,17 @@ import { Team } from './Game';
 import { Rank } from './User';
 
 export interface MatchUser {
+  userId: string;
+  username: string;
   accepted?: boolean;
   city?: string;
-  inviteCode?: string;
+  inviteCode?: string; // isBot=true, doesn't exist
   isBot?: boolean;
   isGuest?: boolean;
   rank?: Rank;
   school?: string;
   state?: string;
   teamId?: string;
-  userId: string;
-  username: string;
 }
 
 export default interface Match {
