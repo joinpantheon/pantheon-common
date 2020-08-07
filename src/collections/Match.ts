@@ -29,6 +29,7 @@ export default interface Match {
   numQuestions?: number;
   ownerUserId?: string;
   ranked?: boolean;
+  rematchId?: string;
   serverTimestamp?: FieldValue;
   subjects?: GameSubject[];
   teams?: Team[];

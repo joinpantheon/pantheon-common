@@ -25,7 +25,6 @@ export interface GameResponse {
   isCorrect?: boolean;
   responseText?: string;
   responseTimestamp?: FieldValue;
-  timeToBuzzMs?: number; // Time taken from start of question to buzz in
 }
 
 export interface Team {
@@ -49,6 +48,7 @@ export default interface Game {
   numWordsRead?: number;
   questionNumber?: number;
   ranked?: boolean;
+  rematchId?: string;
   responses?: GameResponse[];
   subjects?: GameSubject[];
   teams?: Team[];
