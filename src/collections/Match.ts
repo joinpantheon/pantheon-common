@@ -33,5 +33,6 @@ export default interface Match {
   serverTimestamp?: FieldValue;
   subjects?: GameSubject[];
   teams?: Team[];
+  userIds?: string[];
   users?: MatchUser[];
 }
