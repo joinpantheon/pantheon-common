@@ -8,7 +8,7 @@ enum CollectionName {
   QuestionAnswers     = 'questionAnswers',
   QuestionReports     = 'questionReports',
   Stats               = 'stats',
-  Status              = 'status',
+  Statuses            = 'statuses',
   UserReports         = 'userReports',
   Users               = 'users',
   UsersPrivate        = 'usersPrivate'

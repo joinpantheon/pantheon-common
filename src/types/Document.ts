@@ -7,6 +7,7 @@ import Notification from '../collections/Notification';
 import QuestionAnswer from '../collections/QuestionAnswer';
 import QuestionReport from '../collections/QuestionReport';
 import Stats from '../collections/Stats';
+import Status from '../collections/Status';
 import User from '../collections/User';
 import UserPrivate from '../collections/UserPrivate';
 import UserReport from '../collections/UserReport';
@@ -15,9 +16,19 @@ import CollectionName from '../enums/CollectionName';
 /**
  * Union of all collection types.
  */
-type AnyDocument = Chat | Friendship | Game | GameQuestionAnswer | Match | 
-  Notification | QuestionAnswer | QuestionReport | Stats | User | 
-  UserPrivate | UserReport;
+type AnyDocument = Chat 
+  | Friendship 
+  | Game 
+  | GameQuestionAnswer 
+  | Match 
+  | Notification 
+  | QuestionAnswer 
+  | QuestionReport 
+  | Stats 
+  | Status 
+  | User 
+  | UserPrivate 
+  | UserReport;
 
 /**
  * Generic type that represents collection object corresponding to given 
@@ -33,6 +44,7 @@ type Document<T> =
   T extends CollectionName.QuestionAnswers     ? QuestionAnswer     :
   T extends CollectionName.QuestionReports     ? QuestionReport     :
   T extends CollectionName.Stats               ? Stats              :
+  T extends CollectionName.Statuses            ? Status              :
   T extends CollectionName.UserReports         ? UserReport         :
   T extends CollectionName.Users               ? User               : 
   T extends CollectionName.UsersPrivate        ? UserPrivate        :
