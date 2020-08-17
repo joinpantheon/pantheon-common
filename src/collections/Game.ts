@@ -21,10 +21,10 @@ export interface GameResponse {
   questionNumber: number;
   teamId: string;
   userId: string;
-  buzzTimestamp?: FieldValue;
+  buzzDatetime?: number;
   isCorrect?: boolean;
   responseText?: string;
-  responseTimestamp?: FieldValue;
+  responseDatetime?: number;
 }
 
 export interface Team {
